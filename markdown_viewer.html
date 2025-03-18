@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Markdown查看器</title>
+    <!-- 引入highlight.js用于代码高亮 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+    <!-- 引入marked.js用于Markdown渲染 -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        #header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #eaecef;
+        }
+        #title {
+            font-size: 24px;
+            font-weight: 600;
+        }
+        #back-button {
+            padding: 8px 16px;
+            background-color: #f1f1f1;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        #back-button:hover {
+            background-color: #e1e1e1;
+        }
+        #markdown-content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        #markdown-content h1 {
+            border-bottom: 1px solid #eaecef;
+            padding-bottom: 10px;
+        }
+        #markdown-content h2 {
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        #markdown-content code {
+            background-color: rgba(27,31,35,0.05);
+            border-radius: 3px;
+            font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+            font-size: 85%;
+            padding: 0.2em 0.4em;
+        }
+        #markdown-content pre {
+            background-color: #f6f8fa;
+            border-radius: 3px;
+            padding: 16px;
+            overflow: auto;
+        }
+        #markdown-content pre code {
+            background-color: transparent;
+            padding: 0;
+        }
+        #markdown-content table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 16px;
+        }
+        #markdown-content table th, #markdown-content table td {
+            border: 1px solid #dfe2e5;
+            padding: 6px 13px;
+        }
+        #markdown-content table tr:nth-child(2n) {
+            background-color: #f6f8fa;
+        }
+        #loading {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="header">
+        <span id="title">文档查看器</span>
+        <button id="back-button" onclick="goBack()">返回目录</button>
+    </div>
+    
+    <div id="loading">加载中...</div>
+    <div id="markdown-content" style="display: none;"></div>
+
+    <script>
+        // 配置marked以使用highlight.js进行代码高亮
+        marked.setOptions({
+            highlight: function(code, lang) {
+                const language = hljs.getLanguage(lang) ? lang : 'plaintext';
+                return hljs.highlight(code, { language }).value;
+            },
+            langPrefix: 'hljs language-',
+            gfm: true,
+            breaks: true
+        });
+
+        // 从URL中获取文件名
+        function getFilenameFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get('file');
+        }
+
+        // 返回主页
+        function goBack() {
+            window.location.href = '/';
+        }
+
+        // 加载并渲染Markdown文件
+        async function loadMarkdown() {
+            const filename = getFilenameFromUrl();
+            
+            if (!filename) {
+                document.getElementById('loading').textContent = '错误：未指定文件';
+                return;
+            }
+
+            document.title = `查看: ${filename}`;
+            
+            try {
+                const response = await fetch(filename);
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP错误：${response.status}`);
+                }
+                
+                const markdown = await response.text();
+                const html = marked.parse(markdown);
+                
+                document.getElementById('markdown-content').innerHTML = html;
+                document.getElementById('loading').style.display = 'none';
+                document.getElementById('markdown-content').style.display = 'block';
+                
+                // 应用代码高亮
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightElement(block);
+                });
+                
+                // 设置标题
+                document.getElementById('title').textContent = filename;
+            } catch (error) {
+                document.getElementById('loading').textContent = `加载错误：${error.message}`;
+            }
+        }
+
+        // 页面加载完成后执行
+        window.onload = loadMarkdown;
+    </script>
+</body>
+</html> 
