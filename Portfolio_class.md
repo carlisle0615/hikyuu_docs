@@ -144,8 +144,6 @@ class Portfolio:
 
 ## 相关方法
 
-### 与Portfolio相关的方法
-
 #### PF_Simple
 
 ```python

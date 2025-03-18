@@ -83,8 +83,6 @@ class TradeCostBase:
 
 ## 相关方法
 
-### 与TradeCostBase相关的方法
-
 #### TC_FixedA
 
 ```python

@@ -124,8 +124,6 @@ class AllocateFundsBase:
 
 ## 相关方法
 
-### 与AllocateFundsBase相关的方法
-
 #### AF_EqualWeight
 
 ```python

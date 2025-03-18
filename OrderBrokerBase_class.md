@@ -97,8 +97,6 @@ class OrderBrokerBase:
 
 ## 相关方法
 
-### 与OrderBrokerBase相关的方法
-
 #### crtBrokerTM
 
 ```python

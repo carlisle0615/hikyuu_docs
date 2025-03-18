@@ -437,8 +437,6 @@ class Indicator:
 
 ## 相关方法
 
-### 与Indicator相关的方法
-
 #### ABS
 
 ```python
@@ -551,45 +549,8 @@ def ALIGN(data: Indicator, ref: DatetimeList, fill_null: bool = True) -> Indicat
 #### ALIGN
 
 ```python
-def ALIGN(data: Indicator, ref: DatetimeList, fill_null: bool = True) -> Indicator:
-    ...
-```
-
-#### ALIGN
-
-```python
 def ALIGN(data: Indicator, ref: Indicator, fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### ALIGN
-
-```python
-def ALIGN(data: Indicator, ref: Indicator, fill_null: bool = True) -> Indicator:
-    ...
-```
-
-#### ALIGN
-
-```python
-def ALIGN(data: Indicator, ref: Indicator, fill_null: bool = True) -> Indicator:
-    ...
-```
-
-#### ALIGN
-
-```python
-def ALIGN(data: Indicator, ref: KData, fill_null: bool = True) -> Indicator:
-    """
-    ALIGN(data, ref):
-    
-        按指定的参考日期对齐
-    
-        :param Indicator data: 输入数据
-        :param DatetimeList|Indicator|KData ref: 指定做为日期参考的 DatetimeList、Indicator 或 KData
-        :param bool fill_null: 缺失数据使用 nan 填充; 否则使用小于对应日期且最接近对应日期的数据
-        :retype: Indicator
-    """
 ```
 
 #### ALIGN
@@ -632,56 +593,8 @@ def AMA(data: Indicator, n: IndParam, fast_n: IndParam, slow_n: IndParam) -> Ind
 #### AMA
 
 ```python
-def AMA(data: Indicator, n: IndParam, fast_n: IndParam, slow_n: IndParam) -> Indicator:
-    ...
-```
-
-#### AMA
-
-```python
 def AMA(data: Indicator, n: Indicator, fast_n: Indicator, slow_n: Indicator) -> Indicator:
     ...
-```
-
-#### AMA
-
-```python
-def AMA(data: Indicator, n: Indicator, fast_n: Indicator, slow_n: Indicator) -> Indicator:
-    ...
-```
-
-#### AMA
-
-```python
-def AMA(data: Indicator, n: Indicator, fast_n: Indicator, slow_n: Indicator) -> Indicator:
-    ...
-```
-
-#### AMA
-
-```python
-def AMA(data: Indicator, n: Indicator, fast_n: Indicator, slow_n: Indicator) -> Indicator:
-    ...
-```
-
-#### AMA
-
-```python
-def AMA(data: Indicator, n: int = 10, fast_n: int = 2, slow_n: int = 30) -> Indicator:
-    """
-    AMA([data, n=10, fast_n=2, slow_n=30])
-    
-        佩里.J 考夫曼（Perry J.Kaufman）自适应移动平均 [BOOK1]_
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 计算均值的周期窗口，必须为大于2的整数
-        :param int|Indicator|IndParam fast_n: 对应快速周期N
-        :param int|Indicator|IndParam slow_n: 对应慢速EMA线的N值
-        :rtype: Indicator
-    
-        * result(0): AMA
-        * result(1): ER
-    """
 ```
 
 #### AMA
@@ -792,37 +705,8 @@ def AVEDEV(data: Indicator, n: int = 22) -> Indicator:
 #### AVEDEV
 
 ```python
-def AVEDEV(data: Indicator, n: int = 22) -> Indicator:
-    ...
-```
-
-#### AVEDEV
-
-```python
 def AVEDEV(data: Indicator, n: IndParam) -> Indicator:
     ...
-```
-
-#### AVEDEV
-
-```python
-def AVEDEV(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### AVEDEV
-
-```python
-def AVEDEV(data: Indicator, n: Indicator) -> Indicator:
-    """
-    AVEDEV(data[, n=22])
-    
-        平均绝对偏差，求X的N日平均绝对偏差
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### AVEDEV
@@ -864,41 +748,8 @@ def BACKSET(data: Indicator, n: IndParam) -> Indicator:
 #### BACKSET
 
 ```python
-def BACKSET(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### BACKSET
-
-```python
 def BACKSET(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### BACKSET
-
-```python
-def BACKSET(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### BACKSET
-
-```python
-def BACKSET(data: Indicator, n: int = 2) -> Indicator:
-    """
-    BACKSET([data, n=2])
-    
-        向前赋值将当前位置到若干周期前的数据设为1。
-    
-        用法：BACKSET(X,N),X非0,则将当前位置到N周期前的数值设为1。
-    
-        例如：BACKSET(CLOSE>OPEN,2)若收阳则将该周期及前一周期数值设为1,否则为0
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: N周期
-        :rtype: Indicator
-    """
 ```
 
 #### BACKSET
@@ -1034,56 +885,10 @@ def BARSSINCEN(cond: Indicator, n: int) -> Indicator:
     """
 ```
 
-#### BARSSINCEN
-
-```python
-def BARSSINCEN(cond: Indicator, n: int) -> Indicator:
-    """
-    BARSSINCEN(cond, n)
-        
-        N周期内第一个条件成立到当前的周期数
-    
-        用法：BARSSINCEN(X,N):N周期内第一次X不为0到现在的周期数,N为常量BARSSINCEN(X,N)
-        例如：BARSSINCEN(HIGH>10,10)表示10个周期内股价超过10元时到当前的周期数
-    
-        :param Indicator cond: 条件
-        :param int|Indicator n: 时间窗口
-        :rtype: Indicator
-    """
-```
-
 #### BETWEEN
 
 ```python
 def BETWEEN(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### BETWEEN
-
-```python
-def BETWEEN(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### BETWEEN
-
-```python
-def BETWEEN(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### BETWEEN
-
-```python
-def BETWEEN(arg0: Indicator, arg1: Indicator, arg2: float) -> Indicator:
-    ...
-```
-
-#### BETWEEN
-
-```python
-def BETWEEN(arg0: Indicator, arg1: Indicator, arg2: float) -> Indicator:
     ...
 ```
 
@@ -1104,20 +909,6 @@ def BETWEEN(arg0: Indicator, arg1: float, arg2: Indicator) -> Indicator:
 #### BETWEEN
 
 ```python
-def BETWEEN(arg0: Indicator, arg1: float, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### BETWEEN
-
-```python
-def BETWEEN(arg0: Indicator, arg1: float, arg2: float) -> Indicator:
-    ...
-```
-
-#### BETWEEN
-
-```python
 def BETWEEN(arg0: Indicator, arg1: float, arg2: float) -> Indicator:
     ...
 ```
@@ -1126,20 +917,6 @@ def BETWEEN(arg0: Indicator, arg1: float, arg2: float) -> Indicator:
 
 ```python
 def BETWEEN(arg0: float, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### BETWEEN
-
-```python
-def BETWEEN(arg0: float, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### BETWEEN
-
-```python
-def BETWEEN(arg0: float, arg1: Indicator, arg2: float) -> Indicator:
     ...
 ```
 
@@ -1275,71 +1052,11 @@ def CONTEXT(ind: Indicator, fill_null: bool = True) -> Indicator:
     """
 ```
 
-#### CONTEXT
-
-```python
-def CONTEXT(ind: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    CONTEXT(ind)
-        
-        独立上下文。使用 ind 自带的上下文。当指定新的上下文时，不会改变已有的上下文。
-        例如：ind = CLOSE(k1), 当指定新的上下文 ind = ind(k2) 时，使用的是 k2 的收盘价。如想仍使用 k1 收盘价，
-        则需使用 ind = CONTEXT(CLOSE(k1)), 此时 ind(k2) 将仍旧使用 k1 的收盘价。
-        
-        :param Indicator ind: 指标对象
-        :param bool fill_null: 日期对齐时，缺失日期对应填充空值
-        :rtype: Indicator
-    """
-```
-
 #### CORR
 
 ```python
 def CORR(ref_ind: Indicator, n: int = 10, fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### CORR
-
-```python
-def CORR(ref_ind: Indicator, n: int = 10, fill_null: bool = True) -> Indicator:
-    ...
-```
-
-#### CORR
-
-```python
-def CORR(ind: Indicator, ref_ind: Indicator, n: int = 10, fill_null: bool = True) -> Indicator:
-    """
-    CORR(ind, ref_ind[, n=10, fill_null=True])
-    
-        计算 ind 和 ref_ind 的相关系数。返回中存在两个结果，第一个为相关系数，第二个为协方差。
-        与 CORR(ref_ind, n)(ind) 等效。
-    
-        :param Indicator ind: 指标1
-        :param Indicator ref_ind: 指标2
-        :param int n: 按指定 n 的长度计算两个 ind 直接数据相关系数。如果为0，使用输入的ind长度。
-        :param bool fill_null: 日期对齐时缺失日期填充nan值
-        :rtype: Indicator
-    """
-```
-
-#### CORR
-
-```python
-def CORR(ind: Indicator, ref_ind: Indicator, n: int = 10, fill_null: bool = True) -> Indicator:
-    """
-    CORR(ind, ref_ind[, n=10, fill_null=True])
-    
-        计算 ind 和 ref_ind 的相关系数。返回中存在两个结果，第一个为相关系数，第二个为协方差。
-        与 CORR(ref_ind, n)(ind) 等效。
-    
-        :param Indicator ind: 指标1
-        :param Indicator ref_ind: 指标2
-        :param int n: 按指定 n 的长度计算两个 ind 直接数据相关系数。如果为0，使用输入的ind长度。
-        :param bool fill_null: 日期对齐时缺失日期填充nan值
-        :rtype: Indicator
-    """
 ```
 
 #### CORR
@@ -1436,41 +1153,8 @@ def COUNT(data: Indicator, n: Indicator) -> Indicator:
 #### COUNT
 
 ```python
-def COUNT(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### COUNT
-
-```python
 def COUNT(data: Indicator, n: IndParam) -> Indicator:
     ...
-```
-
-#### COUNT
-
-```python
-def COUNT(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### COUNT
-
-```python
-def COUNT(data: Indicator, n: int = 20) -> Indicator:
-    """
-    COUNT([data, n=20])
-    
-        统计满足条件的周期数。
-    
-        用法：COUNT(X,N),统计N周期中满足X条件的周期数,若N=0则从第一个有效值开始。
-    
-        例如：COUNT(CLOSE>OPEN,20)表示统计20周期内收阳的周期数
-    
-        :param Indicator data: 条件
-        :param int|Indicator|IndParam n: 周期
-        :rtype: Indicator
-    """
 ```
 
 #### COUNT
@@ -1496,20 +1180,6 @@ def COUNT(data: Indicator, n: int = 20) -> Indicator:
 
 ```python
 def CROSS(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### CROSS
-
-```python
-def CROSS(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### CROSS
-
-```python
-def CROSS(arg0: Indicator, arg1: float) -> Indicator:
     ...
 ```
 
@@ -1547,22 +1217,6 @@ def CROSS(arg0: float, arg1: float) -> Indicator:
 ```python
 def CVAL(value: float = 0.0, discard: int = 0) -> Indicator:
     ...
-```
-
-#### CVAL
-
-```python
-def CVAL(data: Indicator, value: float = 0.0, discard: int = 0) -> Indicator:
-    """
-    CVAL([data, value=0.0, discard=0])
-    
-        data 为 Indicator 实例，创建和 data 等长的常量指标，其值和为value，抛弃长度discard和data一样
-    
-        :param Indicator data: Indicator实例
-        :param float value: 常数值
-        :param int discard: 抛弃数量
-        :rtype: Indicator
-    """
 ```
 
 #### CVAL
@@ -1836,37 +1490,8 @@ def DEVSQ(data: Indicator, n: Indicator) -> Indicator:
 #### DEVSQ
 
 ```python
-def DEVSQ(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### DEVSQ
-
-```python
 def DEVSQ(data: Indicator, n: IndParam) -> Indicator:
     ...
-```
-
-#### DEVSQ
-
-```python
-def DEVSQ(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### DEVSQ
-
-```python
-def DEVSQ(data: Indicator, n: int = 10) -> Indicator:
-    """
-    DEVSQ([data, n=10])
-    
-        数据偏差平方和，求X的N日数据偏差平方和
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### DEVSQ
@@ -1927,65 +1552,6 @@ def DISCARD(ind: Indicator, discard: int) -> Indicator:
     """
 ```
 
-#### DISCARD
-
-```python
-def DISCARD(ind: Indicator, discard: int) -> Indicator:
-    """
-    DISCARD(data, discard)
-        
-        以指标公式的方式设置指标结果的丢弃数据量。
-    
-        :param Indicator data: 指标
-        :param int discard: 丢弃数据量
-        :rtype: Indicator
-    """
-```
-
-#### DMA
-
-```python
-def DMA(x: Indicator, a: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    DMA(ind, a[, fill_null=True])
-    
-        动态移动平均
-    
-        用法：DMA(X,A),求X的动态移动平均。
-    
-        算法：若Y=DMA(X,A) 则 Y=A*X+(1-A)*Y',其中Y'表示上一周期Y值。
-    
-        例如：DMA(CLOSE,VOL/CAPITAL)表示求以换手率作平滑因子的平均价
-    
-        :param Indicator ind: 输入数据
-        :param Indicator a: 动态系数
-        :param bool fill_null: 日期对齐时缺失数据填充 nan 值。
-        :rtype: Indicator
-    """
-```
-
-#### DMA
-
-```python
-def DMA(x: Indicator, a: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    DMA(ind, a[, fill_null=True])
-    
-        动态移动平均
-    
-        用法：DMA(X,A),求X的动态移动平均。
-    
-        算法：若Y=DMA(X,A) 则 Y=A*X+(1-A)*Y',其中Y'表示上一周期Y值。
-    
-        例如：DMA(CLOSE,VOL/CAPITAL)表示求以换手率作平滑因子的平均价
-    
-        :param Indicator ind: 输入数据
-        :param Indicator a: 动态系数
-        :param bool fill_null: 日期对齐时缺失数据填充 nan 值。
-        :rtype: Indicator
-    """
-```
-
 #### DMA
 
 ```python
@@ -2018,37 +1584,8 @@ def DOWNNDAY(data: Indicator, n: int = 3) -> Indicator:
 #### DOWNNDAY
 
 ```python
-def DOWNNDAY(data: Indicator, n: int = 3) -> Indicator:
-    ...
-```
-
-#### DOWNNDAY
-
-```python
 def DOWNNDAY(data: Indicator, n: IndParam) -> Indicator:
     ...
-```
-
-#### DOWNNDAY
-
-```python
-def DOWNNDAY(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### DOWNNDAY
-
-```python
-def DOWNNDAY(data: Indicator, n: Indicator) -> Indicator:
-    """
-    DOWNNDAY(data[, n=3])
-    
-        连跌周期数, DOWNNDAY(CLOSE,M)表示连涨M个周期
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### DOWNNDAY
@@ -2111,37 +1648,8 @@ def EMA(data: Indicator, n: IndParam) -> Indicator:
 #### EMA
 
 ```python
-def EMA(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### EMA
-
-```python
 def EMA(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### EMA
-
-```python
-def EMA(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### EMA
-
-```python
-def EMA(data: Indicator, n: int = 22) -> Indicator:
-    """
-    EMA([data, n=22])
-    
-        指数移动平均线(Exponential Moving Average)
-    
-        :param data: 输入数据
-        :param int|Indicator|IndParam n n: 计算均值的周期窗口，必须为大于0的整数 
-        :rtype: Indicator
-    """
 ```
 
 #### EMA
@@ -2183,41 +1691,8 @@ def EVERY(data: Indicator, n: IndParam) -> Indicator:
 #### EVERY
 
 ```python
-def EVERY(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### EVERY
-
-```python
 def EVERY(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### EVERY
-
-```python
-def EVERY(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### EVERY
-
-```python
-def EVERY(data: Indicator, n: int = 20) -> Indicator:
-    """
-    EVERY([data, n=20])
-    
-        一直存在
-    
-        用法：EVERY (X,N) 表示条件X在N周期一直存在
-    
-        例如：EVERY(CLOSE>OPEN,10) 表示前10日内一直是阳线
-    
-        :param data: 输入数据
-        :param int|Indicator|IndParam n: 计算均值的周期窗口，必须为大于0的整数 
-        :rtype: Indicator
-    """
 ```
 
 #### EVERY
@@ -2268,21 +1743,6 @@ def EV_TwoLine(fast: Indicator, slow: Indicator, market: str = 'SH') -> Environm
     """
 ```
 
-#### EV_TwoLine
-
-```python
-def EV_TwoLine(fast: Indicator, slow: Indicator, market: str = 'SH') -> EnvironmentBase:
-    """
-    EV_TwoLine(fast, slow[, market = 'SH'])
-    
-        快慢线判断策略，市场指数的快线大于慢线时，市场有效，否则无效。
-    
-        :param Indicator fast: 快线指标
-        :param Indicator slow: 慢线指标
-        :param string market: 市场名称
-    """
-```
-
 #### EXIST
 
 ```python
@@ -2307,37 +1767,8 @@ def EXIST(data: Indicator, n: IndParam) -> Indicator:
 #### EXIST
 
 ```python
-def EXIST(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### EXIST
-
-```python
 def EXIST(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### EXIST
-
-```python
-def EXIST(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### EXIST
-
-```python
-def EXIST(data: Indicator, n: int = 20) -> Indicator:
-    """
-    EXIST([data, n=20])
-    
-        存在, EXIST(X,N) 表示条件X在N周期有存在
-    
-        :param data: 输入数据
-        :param int|Indicator|IndParam n: 计算均值的周期窗口，必须为大于0的整数 
-        :rtype: Indicator
-    """
 ```
 
 #### EXIST
@@ -2407,41 +1838,8 @@ def FILTER(data: Indicator, n: IndParam) -> Indicator:
 #### FILTER
 
 ```python
-def FILTER(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### FILTER
-
-```python
 def FILTER(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### FILTER
-
-```python
-def FILTER(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### FILTER
-
-```python
-def FILTER(data: Indicator, n: int = 5) -> Indicator:
-    """
-    FILTER([data, n=5])
-    
-        信号过滤, 过滤连续出现的信号。
-    
-        用法：FILTER(X,N): X 满足条件后，删除其后 N 周期内的数据置为 0。
-    
-        例如：FILTER(CLOSE>OPEN,5) 查找阳线，5 天内再次出现的阳线不被记录在内。
-    
-        :param Indicator data: 输入数据
-        :param int|Indicaot|IndParam n: 过滤周期
-        :rtype: Indicator
-    """
 ```
 
 #### FILTER
@@ -2557,37 +1955,8 @@ def HHV(data: Indicator, n: Indicator) -> Indicator:
 #### HHV
 
 ```python
-def HHV(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### HHV
-
-```python
 def HHV(data: Indicator, n: IndParam) -> Indicator:
     ...
-```
-
-#### HHV
-
-```python
-def HHV(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### HHV
-
-```python
-def HHV(data: Indicator, n: int = 20) -> Indicator:
-    """
-    HHV([data, n=20])
-    
-        N日内最高价，N=0则从第一个有效值开始。
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: N日时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### HHV
@@ -2629,41 +1998,8 @@ def HHVBARS(data: Indicator, n: IndParam) -> Indicator:
 #### HHVBARS
 
 ```python
-def HHVBARS(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### HHVBARS
-
-```python
 def HHVBARS(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### HHVBARS
-
-```python
-def HHVBARS(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### HHVBARS
-
-```python
-def HHVBARS(data: Indicator, n: int = 20) -> Indicator:
-    """
-    HHVBARS([data, n=20])
-    
-        上一高点位置 求上一高点到当前的周期数。
-    
-        用法：HHVBARS(X,N):求N周期内X最高值到当前周期数N=0表示从第一个有效值开始统计
-    
-        例如：HHVBARS(HIGH,0)求得历史新高到到当前的周期数
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: N日时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### HHVBARS
@@ -2745,43 +2081,6 @@ def IC(ind: Indicator, stks: typing.Any, query: Query, ref_stk: Stock, n: int = 
     """
 ```
 
-#### IC
-
-```python
-def IC(ind: Indicator, stks: typing.Any, query: Query, ref_stk: Stock, n: int = 1, spearman: bool = True) -> Indicator:
-    """
-    IC(ind, stks, query, ref_stk[, n=1])
-    
-        计算指定的因子相对于参考证券的 IC （实际为 RankIC）
-        
-        :param Indicator ind: 输入因子
-        :param sequence(stock)|Block stks 证券组合
-        :param Query query: 查询条件
-        :param Stock ref_stk: 参照证券，通常使用 sh000300 沪深300
-        :param int n: 时间窗口
-        :param bool spearman: 使用 spearman 相关系数，否则为 pearson
-    """
-```
-
-#### ICIR
-
-```python
-def ICIR(ind: Indicator, stks: typing.Any, query: Query, ref_stk: Stock, n: int = 1, rolling_n: int = 120, spearman: bool = True) -> Indicator:
-    """
-    ICIR(ind, stks, query, ref_stk[, n=1, rolling_n=120])
-    
-        计算 IC 因子 IR = IC的多周期均值/IC的标准方差
-    
-        :param Indicator ind: 输入因子
-        :param sequence(stock)|Block stks 证券组合
-        :param Query query: 查询条件
-        :param Stock ref_stk: 参照证券，通常使用 sh000300 沪深300
-        :param int n: 计算IC时对应的 n 日收益率
-        :param int rolling_n: 滚动周期
-        :param bool spearman: 使用 spearman 相关系数，否则为 pearson
-    """
-```
-
 #### ICIR
 
 ```python
@@ -2811,27 +2110,6 @@ def IF(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
 #### IF
 
 ```python
-def IF(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### IF
-
-```python
-def IF(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### IF
-
-```python
-def IF(arg0: Indicator, arg1: float, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### IF
-
-```python
 def IF(arg0: Indicator, arg1: float, arg2: Indicator) -> Indicator:
     ...
 ```
@@ -2841,40 +2119,6 @@ def IF(arg0: Indicator, arg1: float, arg2: Indicator) -> Indicator:
 ```python
 def IF(arg0: Indicator, arg1: Indicator, arg2: float) -> Indicator:
     ...
-```
-
-#### IF
-
-```python
-def IF(arg0: Indicator, arg1: Indicator, arg2: float) -> Indicator:
-    ...
-```
-
-#### IF
-
-```python
-def IF(arg0: Indicator, arg1: Indicator, arg2: float) -> Indicator:
-    ...
-```
-
-#### IF
-
-```python
-def IF(arg0: Indicator, arg1: float, arg2: float) -> Indicator:
-    """
-    IF(x, a, b)
-    
-        条件函数, 根据条件求不同的值。
-    
-        用法：IF(X,A,B)若X不为0则返回A,否则返回B
-    
-        例如：IF(CLOSE>OPEN,HIGH,LOW)表示该周期收阳则返回最高值,否则返回最低值
-    
-        :param Indicator x: 条件指标
-        :param Indicator a: 待选指标 a
-        :param Indicator b: 待选指标 b
-        :rtype: Indicator
-    """
 ```
 
 #### IF
@@ -3074,31 +2318,6 @@ def INSUM(block: Block, ind: Indicator, mode: int, fill_null: bool = True) -> In
 #### INSUM
 
 ```python
-def INSUM(block: Block, ind: Indicator, mode: int, fill_null: bool = True) -> Indicator:
-    ...
-```
-
-#### INSUM
-
-```python
-def INSUM(block: Block, query: Query, ind: Indicator, mode: int, fill_null: bool = True) -> Indicator:
-    """
-    INSUM(block, query, ind, mode[, fill_null=True])
-    
-        返回板块各成分该指标相应输出按计算类型得到的计算值.计算类型:0-累加,1-平均数,2-最大值,3-最小值.
-    
-        :param Block block: 指定板块
-        :param Query query: 指定范围
-        :param Indicator ind: 指定指标
-        :param int mode: 计算类型:0-累加,1-平均数,2-最大值,3-最小值.
-        :param bool fill_null: 日期对齐时缺失数据填充 nan 值。
-        :rtype: Indicator
-    """
-```
-
-#### INSUM
-
-```python
 def INSUM(block: Block, query: Query, ind: Indicator, mode: int, fill_null: bool = True) -> Indicator:
     """
     INSUM(block, query, ind, mode[, fill_null=True])
@@ -3119,31 +2338,6 @@ def INSUM(block: Block, query: Query, ind: Indicator, mode: int, fill_null: bool
 ```python
 def INSUM(stks: typing.Sequence, ind: Indicator, mode: int, fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### INSUM
-
-```python
-def INSUM(stks: typing.Sequence, ind: Indicator, mode: int, fill_null: bool = True) -> Indicator:
-    ...
-```
-
-#### INSUM
-
-```python
-def INSUM(stks: typing.Sequence, query: Query, ind: Indicator, mode: int, fill_null: bool = True) -> Indicator:
-    """
-    INSUM(stks, query, ind, mode[, fill_null=True])
-    
-        返回板块各成分该指标相应输出按计算类型得到的计算值.计算类型:0-累加,1-平均数,2-最大值,3-最小值.
-    
-        :param Sequence stks: stock list
-        :param Query query: 指定范围
-        :param Indicator ind: 指定指标
-        :param int mode: 计算类型:0-累加,1-平均数,2-最大值,3-最小值.
-        :param bool fill_null: 日期对齐时缺失数据填充 nan 值。
-        :rtype: Indicator
-    """
 ```
 
 #### INSUM
@@ -3189,54 +2383,6 @@ def INTPART(arg0: float) -> Indicator:
     
         :param data: 输入数据
         :rtype: Indicator
-    """
-```
-
-#### IR
-
-```python
-def IR(p: Indicator, b: Indicator, n: int = 100) -> Indicator:
-    """
-    IR(p, b[, n])
-    
-        信息比率（Information Ratio，IR）
-    
-        公式: (P-B) / TE
-        P: 组合收益率
-        B: 比较基准收益率
-        TE: 投资周期中每天的 p 和 b 之间的标准差
-        实际使用时，P 一般为 TM 的资产曲线，B 为沪深 3000 收盘价，如:
-        ref_k = sm["sh000300"].get_kdata(query)
-        funds = my_tm.get_funds_curve(ref_k.get_datetime.list())
-        ir = IR(PRICELIST(funds), ref_k.close, 0)
-    
-        :param Indicator p:
-        :param Indicator b:
-        :param int n: 时间窗口，如果只想使用最后的值，可以使用 0, 或 len(p),len(b) 指定
-    """
-```
-
-#### IR
-
-```python
-def IR(p: Indicator, b: Indicator, n: int = 100) -> Indicator:
-    """
-    IR(p, b[, n])
-    
-        信息比率（Information Ratio，IR）
-    
-        公式: (P-B) / TE
-        P: 组合收益率
-        B: 比较基准收益率
-        TE: 投资周期中每天的 p 和 b 之间的标准差
-        实际使用时，P 一般为 TM 的资产曲线，B 为沪深 3000 收盘价，如:
-        ref_k = sm["sh000300"].get_kdata(query)
-        funds = my_tm.get_funds_curve(ref_k.get_datetime.list())
-        ir = IR(PRICELIST(funds), ref_k.close, 0)
-    
-        :param Indicator p:
-        :param Indicator b:
-        :param int n: 时间窗口，如果只想使用最后的值，可以使用 0, 或 len(p),len(b) 指定
     """
 ```
 
@@ -3355,20 +2501,6 @@ def ISNA(ind: Indicator, ignore_discard: bool = False) -> Indicator:
     """
 ```
 
-#### ISNA
-
-```python
-def ISNA(ind: Indicator, ignore_discard: bool = False) -> Indicator:
-    """
-    ISNA(ind[, ignore_discard=False])
-    
-        判断指标是否为 nan 值，若为 nan 值, 则返回1, 否则返回0.
-    
-        :param Indicator ind: 指定指标
-        :param bool ignore_discard: 忽略指标丢弃数据
-    """
-```
-
 #### JUMPDOWN
 
 ```python
@@ -3416,22 +2548,6 @@ def JUMPUP(arg0: Indicator) -> Indicator:
 ```python
 def KALMAN(q: float = 0.01, r: float = 0.1) -> Indicator:
     ...
-```
-
-#### KALMAN
-
-```python
-def KALMAN(ind: Indicator, q: float = 0.01, r: float = 0.1) -> Indicator:
-    """
-    KALMAN(ind, [q=0.01], [r=0.1])
-    
-        Kalman滤波器, 用于平滑指标, 可设置平滑系数q和r, 默认q=0.01, r=0.1
-    
-        :param Indicator ind: 指标
-        :param float q: 平滑系数
-        :param float r: 噪声系数
-        :rtype: Indicator
-    """
 ```
 
 #### KALMAN
@@ -3510,28 +2626,7 @@ def LAST(data: Indicator, m: int = 10, n: int = 5) -> Indicator:
 #### LAST
 
 ```python
-def LAST(data: Indicator, m: int = 10, n: int = 5) -> Indicator:
-    ...
-```
-
-#### LAST
-
-```python
 def LAST(data: Indicator, m: int, n: IndParam) -> Indicator:
-    ...
-```
-
-#### LAST
-
-```python
-def LAST(data: Indicator, m: int, n: IndParam) -> Indicator:
-    ...
-```
-
-#### LAST
-
-```python
-def LAST(data: Indicator, m: IndParam, n: int = 5) -> Indicator:
     ...
 ```
 
@@ -3552,20 +2647,6 @@ def LAST(data: Indicator, m: IndParam, n: IndParam) -> Indicator:
 #### LAST
 
 ```python
-def LAST(data: Indicator, m: IndParam, n: IndParam) -> Indicator:
-    ...
-```
-
-#### LAST
-
-```python
-def LAST(data: Indicator, m: int, n: Indicator) -> Indicator:
-    ...
-```
-
-#### LAST
-
-```python
 def LAST(data: Indicator, m: int, n: Indicator) -> Indicator:
     ...
 ```
@@ -3575,60 +2656,6 @@ def LAST(data: Indicator, m: int, n: Indicator) -> Indicator:
 ```python
 def LAST(data: Indicator, m: Indicator, n: int = 5) -> Indicator:
     ...
-```
-
-#### LAST
-
-```python
-def LAST(data: Indicator, m: Indicator, n: int = 5) -> Indicator:
-    ...
-```
-
-#### LAST
-
-```python
-def LAST(data: Indicator, m: Indicator, n: int = 5) -> Indicator:
-    ...
-```
-
-#### LAST
-
-```python
-def LAST(data: Indicator, m: Indicator, n: Indicator) -> Indicator:
-    """
-    LAST([data, m=10, n=5])
-    
-        区间存在。
-    
-        用法：LAST (X,M,N) 表示条件 X 在前 M 周期到前 N 周期存在。
-    
-        例如：LAST(CLOSE>OPEN,10,5) 表示从前10日到前5日内一直阳线。
-    
-        :param data: 输入数据
-        :param int|Indicator|IndParam m: m周期
-        :param int|Indicator|IndParam n: n周期
-        :rtype: Indicator
-    """
-```
-
-#### LAST
-
-```python
-def LAST(data: Indicator, m: Indicator, n: Indicator) -> Indicator:
-    """
-    LAST([data, m=10, n=5])
-    
-        区间存在。
-    
-        用法：LAST (X,M,N) 表示条件 X 在前 M 周期到前 N 周期存在。
-    
-        例如：LAST(CLOSE>OPEN,10,5) 表示从前10日到前5日内一直阳线。
-    
-        :param data: 输入数据
-        :param int|Indicator|IndParam m: m周期
-        :param int|Indicator|IndParam n: n周期
-        :rtype: Indicator
-    """
 ```
 
 #### LAST
@@ -3656,21 +2683,6 @@ def LAST(data: Indicator, m: Indicator, n: Indicator) -> Indicator:
 ```python
 def LASTVALUE(ignore_discard: bool = False) -> Indicator:
     ...
-```
-
-#### LASTVALUE
-
-```python
-def LASTVALUE(ind: Indicator, ignore_discard: bool = False) -> Indicator:
-    """
-    LASTVALUE(ind, [ignore_discard=False])
-    
-        等同于通达信CONST指标。取输入指标最后值为常数, 即结果中所有值均为输入指标的最后值, 谨慎使用。含未来函数, 谨慎使用。
-    
-        :param Indicator ind: 指标
-        :param bool ignore_discard: 忽略指标丢弃数据
-        :rtype: Indicator
-    """
 ```
 
 #### LASTVALUE
@@ -3733,37 +2745,8 @@ def LLV(data: Indicator, n: IndParam) -> Indicator:
 #### LLV
 
 ```python
-def LLV(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### LLV
-
-```python
 def LLV(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### LLV
-
-```python
-def LLV(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### LLV
-
-```python
-def LLV(data: Indicator, n: int = 20) -> Indicator:
-    """
-    LLV([data, n=20])
-    
-        N日内最低价，N=0则从第一个有效值开始。
-    
-        :param data: 输入数据
-        :param int|Indicator|IndParam n: N日时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### LLV
@@ -3805,41 +2788,8 @@ def LLVBARS(data: Indicator, n: IndParam) -> Indicator:
 #### LLVBARS
 
 ```python
-def LLVBARS(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### LLVBARS
-
-```python
 def LLVBARS(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### LLVBARS
-
-```python
-def LLVBARS(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### LLVBARS
-
-```python
-def LLVBARS(data: Indicator, n: int = 20) -> Indicator:
-    """
-    LLVBARS([data, n=20])
-    
-        上一低点位置 求上一低点到当前的周期数。
-    
-        用法：LLVBARS(X,N):求N周期内X最低值到当前周期数N=0表示从第一个有效值开始统计
-    
-        例如：LLVBARS(HIGH,20)求得20日最低点到当前的周期数
-    
-        :param data: 输入数据
-        :param int|Indicator|IndParam n: N日时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### LLVBARS
@@ -3927,42 +2877,7 @@ def LONGCROSS(a: Indicator, b: Indicator, n: int = 3) -> Indicator:
 #### LONGCROSS
 
 ```python
-def LONGCROSS(a: Indicator, b: Indicator, n: int = 3) -> Indicator:
-    ...
-```
-
-#### LONGCROSS
-
-```python
-def LONGCROSS(a: Indicator, b: Indicator, n: int = 3) -> Indicator:
-    ...
-```
-
-#### LONGCROSS
-
-```python
 def LONGCROSS(a: Indicator, b: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### LONGCROSS
-
-```python
-def LONGCROSS(a: Indicator, b: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### LONGCROSS
-
-```python
-def LONGCROSS(a: Indicator, b: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### LONGCROSS
-
-```python
-def LONGCROSS(a: Indicator, b: float, n: int = 3) -> Indicator:
     ...
 ```
 
@@ -3983,28 +2898,7 @@ def LONGCROSS(a: Indicator, b: float, n: Indicator) -> Indicator:
 #### LONGCROSS
 
 ```python
-def LONGCROSS(a: Indicator, b: float, n: Indicator) -> Indicator:
-    ...
-```
-
-#### LONGCROSS
-
-```python
 def LONGCROSS(a: float, b: Indicator, n: int = 3) -> Indicator:
-    ...
-```
-
-#### LONGCROSS
-
-```python
-def LONGCROSS(a: float, b: Indicator, n: int = 3) -> Indicator:
-    ...
-```
-
-#### LONGCROSS
-
-```python
-def LONGCROSS(a: float, b: Indicator, n: Indicator) -> Indicator:
     ...
 ```
 
@@ -4066,37 +2960,8 @@ def MA(data: Indicator, n: IndParam) -> Indicator:
 #### MA
 
 ```python
-def MA(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### MA
-
-```python
 def MA(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### MA
-
-```python
-def MA(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### MA
-
-```python
-def MA(data: Indicator, n: int = 22) -> Indicator:
-    """
-    MA([data, n=22])
-    
-        简单移动平均
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### MA
@@ -4138,85 +3003,8 @@ def MACD(data: Indicator, n1: int = 12, n2: int = 26, n3: int = 9) -> Indicator:
 #### MACD
 
 ```python
-def MACD(data: Indicator, n1: int = 12, n2: int = 26, n3: int = 9) -> Indicator:
-    ...
-```
-
-#### MACD
-
-```python
 def MACD(data: Indicator, n1: IndParam, n2: IndParam, n3: IndParam) -> Indicator:
     ...
-```
-
-#### MACD
-
-```python
-def MACD(data: Indicator, n1: IndParam, n2: IndParam, n3: IndParam) -> Indicator:
-    ...
-```
-
-#### MACD
-
-```python
-def MACD(data: Indicator, n1: Indicator, n2: Indicator, n3: Indicator) -> Indicator:
-    """
-    MACD([data, n1=12, n2=26, n3=9])
-    
-        平滑异同移动平均线
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n1: 短期EMA时间窗
-        :param int|Indicator|IndParam n2: 长期EMA时间窗
-        :param int|Indicator|IndParam n3: （短期EMA-长期EMA）EMA平滑时间窗
-        :rtype: 具有三个结果集的 Indicator
-    
-        * result(0): MACD_BAR：MACD直柱，即MACD快线－MACD慢线
-        * result(1): DIFF: 快线,即（短期EMA-长期EMA）
-        * result(2): DEA: 慢线，即快线的n3周期EMA平滑
-    """
-```
-
-#### MACD
-
-```python
-def MACD(data: Indicator, n1: Indicator, n2: Indicator, n3: Indicator) -> Indicator:
-    """
-    MACD([data, n1=12, n2=26, n3=9])
-    
-        平滑异同移动平均线
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n1: 短期EMA时间窗
-        :param int|Indicator|IndParam n2: 长期EMA时间窗
-        :param int|Indicator|IndParam n3: （短期EMA-长期EMA）EMA平滑时间窗
-        :rtype: 具有三个结果集的 Indicator
-    
-        * result(0): MACD_BAR：MACD直柱，即MACD快线－MACD慢线
-        * result(1): DIFF: 快线,即（短期EMA-长期EMA）
-        * result(2): DEA: 慢线，即快线的n3周期EMA平滑
-    """
-```
-
-#### MACD
-
-```python
-def MACD(data: Indicator, n1: Indicator, n2: Indicator, n3: Indicator) -> Indicator:
-    """
-    MACD([data, n1=12, n2=26, n3=9])
-    
-        平滑异同移动平均线
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n1: 短期EMA时间窗
-        :param int|Indicator|IndParam n2: 长期EMA时间窗
-        :param int|Indicator|IndParam n3: （短期EMA-长期EMA）EMA平滑时间窗
-        :rtype: 具有三个结果集的 Indicator
-    
-        * result(0): MACD_BAR：MACD直柱，即MACD快线－MACD慢线
-        * result(1): DIFF: 快线,即（短期EMA-长期EMA）
-        * result(2): DEA: 慢线，即快线的n3周期EMA平滑
-    """
 ```
 
 #### MACD
@@ -4244,20 +3032,6 @@ def MACD(data: Indicator, n1: Indicator, n2: Indicator, n3: Indicator) -> Indica
 
 ```python
 def MAX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### MAX
-
-```python
-def MAX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### MAX
-
-```python
-def MAX(arg0: Indicator, arg1: float) -> Indicator:
     ...
 ```
 
@@ -4311,20 +3085,6 @@ def MIN(arg0: Indicator, arg1: Indicator) -> Indicator:
 #### MIN
 
 ```python
-def MIN(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### MIN
-
-```python
-def MIN(arg0: Indicator, arg1: float) -> Indicator:
-    ...
-```
-
-#### MIN
-
-```python
 def MIN(arg0: Indicator, arg1: float) -> Indicator:
     ...
 ```
@@ -4369,20 +3129,6 @@ def MINUTE(arg0: KData) -> Indicator:
 
 ```python
 def MOD(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### MOD
-
-```python
-def MOD(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### MOD
-
-```python
-def MOD(arg0: Indicator, arg1: float) -> Indicator:
     ...
 ```
 
@@ -4468,68 +3214,8 @@ def NDAY(x: Indicator, y: Indicator, n: int = 3) -> Indicator:
 #### NDAY
 
 ```python
-def NDAY(x: Indicator, y: Indicator, n: int = 3) -> Indicator:
-    ...
-```
-
-#### NDAY
-
-```python
-def NDAY(x: Indicator, y: Indicator, n: int = 3) -> Indicator:
-    ...
-```
-
-#### NDAY
-
-```python
 def NDAY(x: Indicator, y: Indicator, n: int) -> Indicator:
     ...
-```
-
-#### NDAY
-
-```python
-def NDAY(x: Indicator, y: Indicator, n: int) -> Indicator:
-    ...
-```
-
-#### NDAY
-
-```python
-def NDAY(x: Indicator, y: Indicator, n: int) -> Indicator:
-    ...
-```
-
-#### NDAY
-
-```python
-def NDAY(x: Indicator, y: Indicator, n: IndParam) -> Indicator:
-    """
-    NDAY(x, y[, n=3])
-    
-        连大, NDAY(X,Y,N)表示条件X>Y持续存在N个周期
-    
-        :param Indicator x:
-        :param Indicator y:
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
-```
-
-#### NDAY
-
-```python
-def NDAY(x: Indicator, y: Indicator, n: IndParam) -> Indicator:
-    """
-    NDAY(x, y[, n=3])
-    
-        连大, NDAY(X,Y,N)表示条件X>Y持续存在N个周期
-    
-        :param Indicator x:
-        :param Indicator y:
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### NDAY
@@ -4600,28 +3286,7 @@ def POW(data: Indicator, n: int) -> Indicator:
 #### POW
 
 ```python
-def POW(data: Indicator, n: int) -> Indicator:
-    ...
-```
-
-#### POW
-
-```python
 def POW(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### POW
-
-```python
-def POW(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### POW
-
-```python
-def POW(data: Indicator, n: Indicator) -> Indicator:
     ...
 ```
 
@@ -4794,39 +3459,8 @@ def REF(data: Indicator, n: IndParam) -> Indicator:
 #### REF
 
 ```python
-def REF(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### REF
-
-```python
 def REF(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### REF
-
-```python
-def REF(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### REF
-
-```python
-def REF(data: Indicator, n: int) -> Indicator:
-    """
-    REF([data, n])
-    
-        向前引用 （即右移），引用若干周期前的数据。
-    
-        用法：REF(X，A)　引用A周期前的X值。
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 引用n周期前的值，即右移n位
-        :rtype: Indicator
-    """
 ```
 
 #### REF
@@ -4870,42 +3504,11 @@ def REPLACE(ind: Indicator, old_value: float = ..., new_value: float = 0.0, igno
     """
 ```
 
-#### REPLACE
-
-```python
-def REPLACE(ind: Indicator, old_value: float = ..., new_value: float = 0.0, ignore_discard: bool = False) -> Indicator:
-    """
-    REPLACE(ind, [old_value=constant.nan, new_value=0.0, ignore_discard=False]
-              
-        替换指标中指定值，默认为替换 nan 值为 0.0。
-    
-        :param Indicator ind: 指定指标
-        :param double old_value: 指定值
-        :param double new_value: 替换值
-        :param bool ignore_discard: 忽略指标丢弃数据
-        :rtype: Indicator
-    """
-```
-
 #### RESULT
 
 ```python
 def RESULT(arg0: int) -> Indicator:
     ...
-```
-
-#### RESULT
-
-```python
-def RESULT(data: Indicator, result_ix: int) -> Indicator:
-    """
-    RESULT(data, result_ix)
-              
-        以公式指标的方式返回指定指标中的指定结果集
-    
-        :param Indicator data: 指定的指标
-        :param int result_ix: 指定的结果集
-    """
 ```
 
 #### RESULT
@@ -4974,37 +3577,8 @@ def ROC(data: Indicator, n: IndParam) -> Indicator:
 #### ROC
 
 ```python
-def ROC(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### ROC
-
-```python
 def ROC(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### ROC
-
-```python
-def ROC(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### ROC
-
-```python
-def ROC(data: Indicator, n: int = 10) -> Indicator:
-    """
-    ROC([data, n=10])
-    
-        变动率指标: ((price / prevPrice)-1)*100
-    
-        :param data: 输入数据
-        :param int n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### ROC
@@ -5046,37 +3620,8 @@ def ROCP(data: Indicator, n: IndParam) -> Indicator:
 #### ROCP
 
 ```python
-def ROCP(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### ROCP
-
-```python
 def ROCP(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### ROCP
-
-```python
-def ROCP(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### ROCP
-
-```python
-def ROCP(data: Indicator, n: int = 10) -> Indicator:
-    """
-    ROCP([data, n=10])
-    
-        变动率指标: (price - prevPrice) / prevPrice
-    
-        :param data: 输入数据
-        :param int n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### ROCP
@@ -5118,37 +3663,8 @@ def ROCR(data: Indicator, n: IndParam) -> Indicator:
 #### ROCR
 
 ```python
-def ROCR(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### ROCR
-
-```python
 def ROCR(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### ROCR
-
-```python
-def ROCR(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### ROCR
-
-```python
-def ROCR(data: Indicator, n: int = 10) -> Indicator:
-    """
-    ROCR([data, n=10])
-    
-        变动率指标: (price / prevPrice)
-    
-        :param data: 输入数据
-        :param int n|Indicator|IndParam: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### ROCR
@@ -5190,37 +3706,8 @@ def ROCR100(data: Indicator, n: IndParam) -> Indicator:
 #### ROCR100
 
 ```python
-def ROCR100(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### ROCR100
-
-```python
 def ROCR100(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### ROCR100
-
-```python
-def ROCR100(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### ROCR100
-
-```python
-def ROCR100(data: Indicator, n: int = 10) -> Indicator:
-    """
-    ROCR100([data, n=10])
-    
-        变动率指标: (price / prevPrice) * 100
-    
-        :param data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### ROCR100
@@ -5242,13 +3729,6 @@ def ROCR100(data: Indicator, n: int = 10) -> Indicator:
 
 ```python
 def ROUND(ndigits: int = 2) -> Indicator:
-    ...
-```
-
-#### ROUND
-
-```python
-def ROUND(data: Indicator, ndigits: int = 2) -> Indicator:
     ...
 ```
 
@@ -5291,13 +3771,6 @@ def ROUNDDOWN(data: Indicator, ndigits: int = 2) -> Indicator:
 #### ROUNDDOWN
 
 ```python
-def ROUNDDOWN(data: Indicator, ndigits: int = 2) -> Indicator:
-    ...
-```
-
-#### ROUNDDOWN
-
-```python
 def ROUNDDOWN(data: float, ndigits: int = 2) -> Indicator:
     """
     ROUND([data, ndigits=2])
@@ -5314,13 +3787,6 @@ def ROUNDDOWN(data: float, ndigits: int = 2) -> Indicator:
 
 ```python
 def ROUNDUP(ndigits: int = 2) -> Indicator:
-    ...
-```
-
-#### ROUNDUP
-
-```python
-def ROUNDUP(data: Indicator, ndigits: int = 2) -> Indicator:
     ...
 ```
 
@@ -5351,21 +3817,6 @@ def ROUNDUP(data: float, ndigits: int = 2) -> Indicator:
 ```python
 def RSI(n: int = 14) -> Indicator:
     ...
-```
-
-#### RSI
-
-```python
-def RSI(data: Indicator, n: int = 14) -> Indicator:
-    """
-    RSI([data, n=14])
-    
-        相对强弱指数
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### RSI
@@ -5414,20 +3865,6 @@ def SAFTYLOSS(data: Indicator, n1: int = 10, n2: int = 3, p: float = 2.0) -> Ind
 #### SAFTYLOSS
 
 ```python
-def SAFTYLOSS(data: Indicator, n1: int = 10, n2: int = 3, p: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: IndParam, n2: IndParam, p: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
 def SAFTYLOSS(data: Indicator, n1: IndParam, n2: IndParam, p: float = 2.0) -> Indicator:
     ...
 ```
@@ -5442,93 +3879,8 @@ def SAFTYLOSS(data: Indicator, n1: IndParam, n2: IndParam, p: IndParam) -> Indic
 #### SAFTYLOSS
 
 ```python
-def SAFTYLOSS(data: Indicator, n1: IndParam, n2: IndParam, p: IndParam) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
 def SAFTYLOSS(data: Indicator, n1: Indicator, n2: Indicator, p: float = 2.0) -> Indicator:
     ...
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: Indicator, n2: Indicator, p: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: Indicator, n2: Indicator, p: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: Indicator, n2: Indicator, p: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: Indicator, n2: Indicator, p: Indicator) -> Indicator:
-    """
-    SAFTYLOSS([data, n1=10, n2=3, p=2.0])
-    
-        亚历山大 艾尔德安全地带止损线，参见 [BOOK2]_
-    
-        计算说明：在回溯周期内（一般为10到20天），将所有向下穿越的长度相加除以向下穿越的次数，得到噪音均值（即回溯期内所有最低价低于前一日最低价的长度除以次数），并用今日最低价减去（前日噪音均值乘以一个倍数）得到该止损线。为了抵消波动并且保证止损线的上移，在上述结果的基础上再取起N日（一般为3天）内的最高值
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n1: 计算平均噪音的回溯时间窗口
-        :param int|Indicator|IndParam n2: 对初步止损线去n2日内的最高值
-        :param float|Indicator|IndParam p: 噪音系数
-        :rtype: Indicator
-    """
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: Indicator, n2: Indicator, p: Indicator) -> Indicator:
-    """
-    SAFTYLOSS([data, n1=10, n2=3, p=2.0])
-    
-        亚历山大 艾尔德安全地带止损线，参见 [BOOK2]_
-    
-        计算说明：在回溯周期内（一般为10到20天），将所有向下穿越的长度相加除以向下穿越的次数，得到噪音均值（即回溯期内所有最低价低于前一日最低价的长度除以次数），并用今日最低价减去（前日噪音均值乘以一个倍数）得到该止损线。为了抵消波动并且保证止损线的上移，在上述结果的基础上再取起N日（一般为3天）内的最高值
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n1: 计算平均噪音的回溯时间窗口
-        :param int|Indicator|IndParam n2: 对初步止损线去n2日内的最高值
-        :param float|Indicator|IndParam p: 噪音系数
-        :rtype: Indicator
-    """
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: Indicator, n2: Indicator, p: Indicator) -> Indicator:
-    """
-    SAFTYLOSS([data, n1=10, n2=3, p=2.0])
-    
-        亚历山大 艾尔德安全地带止损线，参见 [BOOK2]_
-    
-        计算说明：在回溯周期内（一般为10到20天），将所有向下穿越的长度相加除以向下穿越的次数，得到噪音均值（即回溯期内所有最低价低于前一日最低价的长度除以次数），并用今日最低价减去（前日噪音均值乘以一个倍数）得到该止损线。为了抵消波动并且保证止损线的上移，在上述结果的基础上再取起N日（一般为3天）内的最高值
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n1: 计算平均噪音的回溯时间窗口
-        :param int|Indicator|IndParam n2: 对初步止损线去n2日内的最高值
-        :param float|Indicator|IndParam p: 噪音系数
-        :rtype: Indicator
-    """
 ```
 
 #### SAFTYLOSS
@@ -5588,13 +3940,6 @@ def SG_Band(ind: Indicator, lower: Indicator, upper: Indicator) -> SignalBase:
 #### SG_Band
 
 ```python
-def SG_Band(ind: Indicator, lower: Indicator, upper: Indicator) -> SignalBase:
-    ...
-```
-
-#### SG_Band
-
-```python
 def SG_Band(ind: Indicator, lower: float, upper: float) -> SignalBase:
     """
     SG_Band(ind, lower, upper)
@@ -5604,22 +3949,6 @@ def SG_Band(ind: Indicator, lower: float, upper: float) -> SignalBase:
     
             SG_Band(MA(C, n=10), 100, 200)
             SG_Band(CLOSE, MA(LOW), MA(HIGH))
-    """
-```
-
-#### SG_Bool
-
-```python
-def SG_Bool(buy: Indicator, sell: Indicator, alternate: bool = True) -> SignalBase:
-    """
-    SG_Bool(buy, sell)
-    
-        布尔信号指示器，使用运算结果为类似bool数组的Indicator分别作为买入、卖出指示。
-    
-        :param Indicator buy: 买入指示（结果Indicator中相应位置>0则代表买入）
-        :param Indicator sell: 卖出指示（结果Indicator中相应位置>0则代表卖出）
-        :param bool alternate: 是否交替买入卖出，默认为True
-        :return: 信号指示器
     """
 ```
 
@@ -5805,22 +4134,6 @@ def SLICE(data: Indicator, start: int, end: int, result_index: int = 0) -> Indic
     """
 ```
 
-#### SLICE
-
-```python
-def SLICE(data: Indicator, start: int, end: int, result_index: int = 0) -> Indicator:
-    """
-    SLICE(data, start, end, result_index=0)
-    
-        获取某指标中指定范围 [start, end) 的数据，生成新的指标
-    
-        :param Indicator|PriceList data: 输入数据
-        :param int start: 起始位置
-        :param int end: 终止位置（不包含本身）
-        :param int result_index: 原输入数据中的结果集
-    """
-```
-
 #### SLOPE
 
 ```python
@@ -5845,37 +4158,8 @@ def SLOPE(data: Indicator, n: int = 22) -> Indicator:
 #### SLOPE
 
 ```python
-def SLOPE(data: Indicator, n: int = 22) -> Indicator:
-    ...
-```
-
-#### SLOPE
-
-```python
 def SLOPE(data: Indicator, n: IndParam) -> Indicator:
     ...
-```
-
-#### SLOPE
-
-```python
-def SLOPE(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### SLOPE
-
-```python
-def SLOPE(data: Indicator, n: Indicator) -> Indicator:
-    """
-    SLOPE([data, n=22])
-    
-        计算线性回归斜率，N支持变量
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### SLOPE
@@ -5931,28 +4215,7 @@ def SMA(data: Indicator, n: int = 22, m: float = 2.0) -> Indicator:
 #### SMA
 
 ```python
-def SMA(data: Indicator, n: int = 22, m: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SMA
-
-```python
 def SMA(data: Indicator, n: int, m: IndParam) -> Indicator:
-    ...
-```
-
-#### SMA
-
-```python
-def SMA(data: Indicator, n: int, m: IndParam) -> Indicator:
-    ...
-```
-
-#### SMA
-
-```python
-def SMA(data: Indicator, n: IndParam, m: float = 2.0) -> Indicator:
     ...
 ```
 
@@ -5973,20 +4236,6 @@ def SMA(data: Indicator, n: IndParam, m: IndParam) -> Indicator:
 #### SMA
 
 ```python
-def SMA(data: Indicator, n: IndParam, m: IndParam) -> Indicator:
-    ...
-```
-
-#### SMA
-
-```python
-def SMA(data: Indicator, n: int, m: Indicator) -> Indicator:
-    ...
-```
-
-#### SMA
-
-```python
 def SMA(data: Indicator, n: int, m: Indicator) -> Indicator:
     ...
 ```
@@ -5996,56 +4245,6 @@ def SMA(data: Indicator, n: int, m: Indicator) -> Indicator:
 ```python
 def SMA(data: Indicator, n: Indicator, m: float = 2.0) -> Indicator:
     ...
-```
-
-#### SMA
-
-```python
-def SMA(data: Indicator, n: Indicator, m: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SMA
-
-```python
-def SMA(data: Indicator, n: Indicator, m: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SMA
-
-```python
-def SMA(data: Indicator, n: Indicator, m: Indicator) -> Indicator:
-    """
-    SMA([data, n=22, m=2])
-    
-        求移动平均
-    
-        用法：若Y=SMA(X,N,M) 则 Y=[M*X+(N-M)*Y')/N,其中Y'表示上一周期Y值
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :param float|Indicator|IndParam m: 系数
-        :rtype: Indicator
-    """
-```
-
-#### SMA
-
-```python
-def SMA(data: Indicator, n: Indicator, m: Indicator) -> Indicator:
-    """
-    SMA([data, n=22, m=2])
-    
-        求移动平均
-    
-        用法：若Y=SMA(X,N,M) 则 Y=[M*X+(N-M)*Y')/N,其中Y'表示上一周期Y值
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :param float|Indicator|IndParam m: 系数
-        :rtype: Indicator
-    """
 ```
 
 #### SMA
@@ -6071,45 +4270,6 @@ def SMA(data: Indicator, n: Indicator, m: Indicator) -> Indicator:
 ```python
 def SPEARMAN(ref_ind: Indicator, n: int = 0, fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### SPEARMAN
-
-```python
-def SPEARMAN(ref_ind: Indicator, n: int = 0, fill_null: bool = True) -> Indicator:
-    ...
-```
-
-#### SPEARMAN
-
-```python
-def SPEARMAN(ind: Indicator, ref_ind: Indicator, n: int = 0, fill_null: bool = True) -> Indicator:
-    """
-    SPEARMAN(ind, ref_ind[, n=0, fill_null=True])
-    
-        Spearman 相关系数。与 SPEARMAN(ref_ind, n)(ind) 等效。
-    
-        :param Indicator ind: 输入参数1
-        :param Indicator ref_ind: 输入参数2
-        :param int n: 滚动窗口(大于2 或 等于0)，等于0时，代表 n 实际使用 ind 的长度
-        :param bool fill_null: 缺失数据使用 nan 填充; 否则使用小于对应日期且最接近对应日期的数据
-    """
-```
-
-#### SPEARMAN
-
-```python
-def SPEARMAN(ind: Indicator, ref_ind: Indicator, n: int = 0, fill_null: bool = True) -> Indicator:
-    """
-    SPEARMAN(ind, ref_ind[, n=0, fill_null=True])
-    
-        Spearman 相关系数。与 SPEARMAN(ref_ind, n)(ind) 等效。
-    
-        :param Indicator ind: 输入参数1
-        :param Indicator ref_ind: 输入参数2
-        :param int n: 滚动窗口(大于2 或 等于0)，等于0时，代表 n 实际使用 ind 的长度
-        :param bool fill_null: 缺失数据使用 nan 填充; 否则使用小于对应日期且最接近对应日期的数据
-    """
 ```
 
 #### SPEARMAN
@@ -6184,37 +4344,8 @@ def STDEV(data: Indicator, n: IndParam) -> Indicator:
 #### STDEV
 
 ```python
-def STDEV(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### STDEV
-
-```python
 def STDEV(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### STDEV
-
-```python
-def STDEV(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### STDEV
-
-```python
-def STDEV(data: Indicator, n: int = 10) -> Indicator:
-    """
-    STDEV([data, n=10])
-    
-        计算N周期内样本标准差
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### STDEV
@@ -6256,37 +4387,8 @@ def STDP(data: Indicator, n: IndParam) -> Indicator:
 #### STDP
 
 ```python
-def STDP(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### STDP
-
-```python
 def STDP(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### STDP
-
-```python
-def STDP(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### STDP
-
-```python
-def STDP(data: Indicator, n: int = 10) -> Indicator:
-    """
-    STDP([data, n=10])
-    
-        总体标准差，STDP(X,N)为X的N日总体标准差
-    
-        :param data: 输入数据
-        :param int n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### STDP
@@ -6328,37 +4430,8 @@ def SUM(data: Indicator, n: IndParam) -> Indicator:
 #### SUM
 
 ```python
-def SUM(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### SUM
-
-```python
 def SUM(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### SUM
-
-```python
-def SUM(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### SUM
-
-```python
-def SUM(data: Indicator, n: int = 20) -> Indicator:
-    """
-    SUM([data, n=20])
-    
-        求总和。SUM(X,N),统计N周期中X的总和,N=0则从第一个有效值开始。
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### SUM
@@ -6400,41 +4473,8 @@ def SUMBARS(data: Indicator, a: IndParam) -> Indicator:
 #### SUMBARS
 
 ```python
-def SUMBARS(data: Indicator, a: IndParam) -> Indicator:
-    ...
-```
-
-#### SUMBARS
-
-```python
 def SUMBARS(data: Indicator, a: Indicator) -> Indicator:
     ...
-```
-
-#### SUMBARS
-
-```python
-def SUMBARS(data: Indicator, a: Indicator) -> Indicator:
-    ...
-```
-
-#### SUMBARS
-
-```python
-def SUMBARS(data: Indicator, a: float) -> Indicator:
-    """
-    SUMBARS([data,] a)
-    
-        累加到指定周期数, 向前累加到指定值到现在的周期数
-    
-        用法：SUMBARS(X,A):将X向前累加直到大于等于A,返回这个区间的周期数
-    
-        例如：SUMBARS(VOL,CAPITAL)求完全换手到现在的周期数
-    
-        :param Indicator data: 输入数据
-        :param float a|Indicator|IndParam: 指定累加和
-        :rtype: Indicator
-    """
 ```
 
 #### SUMBARS
@@ -6561,30 +4601,6 @@ def TA_ADD(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicato
     """
 ```
 
-#### TA_ADD
-
-```python
-def TA_ADD(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    TA_ADD - Vector Arithmetic Add
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    """
-```
-
-#### TA_ADD
-
-```python
-def TA_ADD(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    TA_ADD - Vector Arithmetic Add
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    """
-```
-
 #### TA_ADOSC
 
 ```python
@@ -6648,20 +4664,6 @@ def TA_ADXR(data: KData, n: int = 14) -> Indicator:
 ```python
 def TA_APO(fast_n: int = 12, slow_n: int = 26, matype: int = 0) -> Indicator:
     ...
-```
-
-#### TA_APO
-
-```python
-def TA_APO(data: Indicator, fast_n: int = 12, slow_n: int = 26, matype: int = 0) -> Indicator:
-    """
-    TA_APO - Absolute Price Oscillator
-    
-    :param Indicator data: input data
-    :param int fast_n: Number of period for the fast MA (From 2 to 100000)
-    :param int slow_n: Number of period for the slow MA (From 2 to 100000)    
-    :param int matype: Type of Moving Average
-    """
 ```
 
 #### TA_APO
@@ -6807,34 +4809,8 @@ def TA_AVGDEV(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_AVGDEV
 
 ```python
-def TA_AVGDEV(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_AVGDEV
-
-```python
 def TA_AVGDEV(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_AVGDEV
-
-```python
-def TA_AVGDEV(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_AVGDEV
-
-```python
-def TA_AVGDEV(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_AVGDEV - Average Deviation
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_AVGDEV
@@ -6891,56 +4867,11 @@ def TA_BBANDS(data: Indicator, n: int = 5, nbdevup: float = 2.0, nbdevdn: float 
     """
 ```
 
-#### TA_BBANDS
-
-```python
-def TA_BBANDS(data: Indicator, n: int = 5, nbdevup: float = 2.0, nbdevdn: float = 2.0, matype: int = 0) -> Indicator:
-    """
-    TA_BBANDS - Bollinger Bands
-              
-    :param Indicator data: input data
-    :param int n: Number of periode (From 1 to 100000)
-    :param float nbdevup: Deviation multiplier for upper band
-    :param float nbdevdn: Deviation multiplier for lower band
-    :rtype: 具有三个结果集的 Indicator
-    
-        * result(0): Upper Band
-        * result(1): Middle Band
-        * result(2): Lower Band
-    """
-```
-
 #### TA_BETA
 
 ```python
 def TA_BETA(n: int = 5, fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### TA_BETA
-
-```python
-def TA_BETA(ind1: Indicator, ind2: Indicator, n: int = 5, fill_null: bool = True) -> Indicator:
-    """
-    TA_BETA - Beta
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    :param int n: Number of periode (From 1 to 100000)
-    """
-```
-
-#### TA_BETA
-
-```python
-def TA_BETA(ind1: Indicator, ind2: Indicator, n: int = 5, fill_null: bool = True) -> Indicator:
-    """
-    TA_BETA - Beta
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    :param int n: Number of periode (From 1 to 100000)
-    """
 ```
 
 #### TA_BETA
@@ -8035,34 +5966,8 @@ def TA_CMO(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_CMO
 
 ```python
-def TA_CMO(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_CMO
-
-```python
 def TA_CMO(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_CMO
-
-```python
-def TA_CMO(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_CMO
-
-```python
-def TA_CMO(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_CMO - Chande Momentum Oscillator
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_CMO
@@ -8082,32 +5987,6 @@ def TA_CMO(data: Indicator, n: int = 14) -> Indicator:
 ```python
 def TA_CORREL(n: int = 30, fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### TA_CORREL
-
-```python
-def TA_CORREL(ind1: Indicator, ind2: Indicator, n: int = 30, fill_null: bool = True) -> Indicator:
-    """
-    TA_CORREL - Pearson's Correlation Coefficient (r)
-        
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    :param int n: Number of periode (From 1 to 100000)
-    """
-```
-
-#### TA_CORREL
-
-```python
-def TA_CORREL(ind1: Indicator, ind2: Indicator, n: int = 30, fill_null: bool = True) -> Indicator:
-    """
-    TA_CORREL - Pearson's Correlation Coefficient (r)
-        
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    :param int n: Number of periode (From 1 to 100000)
-    """
 ```
 
 #### TA_CORREL
@@ -8193,34 +6072,8 @@ def TA_DEMA(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_DEMA
 
 ```python
-def TA_DEMA(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_DEMA
-
-```python
 def TA_DEMA(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_DEMA
-
-```python
-def TA_DEMA(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_DEMA
-
-```python
-def TA_DEMA(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_DEMA - Double Exponential Moving Average
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_DEMA
@@ -8240,30 +6093,6 @@ def TA_DEMA(data: Indicator, n: int = 30) -> Indicator:
 ```python
 def TA_DIV(fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### TA_DIV
-
-```python
-def TA_DIV(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    TA_DIV - Vector Arithmetic Div
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    """
-```
-
-#### TA_DIV
-
-```python
-def TA_DIV(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    TA_DIV - Vector Arithmetic Div
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    """
 ```
 
 #### TA_DIV
@@ -8321,34 +6150,8 @@ def TA_EMA(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_EMA
 
 ```python
-def TA_EMA(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_EMA
-
-```python
 def TA_EMA(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_EMA
-
-```python
-def TA_EMA(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_EMA
-
-```python
-def TA_EMA(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_EMA - Exponential Moving Average
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_EMA
@@ -8595,34 +6398,8 @@ def TA_KAMA(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_KAMA
 
 ```python
-def TA_KAMA(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_KAMA
-
-```python
 def TA_KAMA(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_KAMA
-
-```python
-def TA_KAMA(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_KAMA
-
-```python
-def TA_KAMA(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_KAMA - Kaufman Adaptive Moving Average
-    
-    :param KData data: input KData
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_KAMA
@@ -8661,34 +6438,8 @@ def TA_LINEARREG(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_LINEARREG
 
 ```python
-def TA_LINEARREG(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_LINEARREG
-
-```python
 def TA_LINEARREG(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_LINEARREG
-
-```python
-def TA_LINEARREG(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_LINEARREG
-
-```python
-def TA_LINEARREG(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_LINEARREG - Linear Regression
-    
-    :param KData data: input KData
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_LINEARREG
@@ -8727,34 +6478,8 @@ def TA_LINEARREG_ANGLE(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_LINEARREG_ANGLE
 
 ```python
-def TA_LINEARREG_ANGLE(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_LINEARREG_ANGLE
-
-```python
 def TA_LINEARREG_ANGLE(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_LINEARREG_ANGLE
-
-```python
-def TA_LINEARREG_ANGLE(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_LINEARREG_ANGLE
-
-```python
-def TA_LINEARREG_ANGLE(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_LINEARREG_ANGLE - Linear Regression Angle
-    
-    :param KData data: input KData
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_LINEARREG_ANGLE
@@ -8793,34 +6518,8 @@ def TA_LINEARREG_INTERCEPT(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_LINEARREG_INTERCEPT
 
 ```python
-def TA_LINEARREG_INTERCEPT(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_LINEARREG_INTERCEPT
-
-```python
 def TA_LINEARREG_INTERCEPT(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_LINEARREG_INTERCEPT
-
-```python
-def TA_LINEARREG_INTERCEPT(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_LINEARREG_INTERCEPT
-
-```python
-def TA_LINEARREG_INTERCEPT(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_LINEARREG_INTERCEPT - Linear Regression Intercept
-    
-    :param KData data: input KData
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_LINEARREG_INTERCEPT
@@ -8859,34 +6558,8 @@ def TA_LINEARREG_SLOPE(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_LINEARREG_SLOPE
 
 ```python
-def TA_LINEARREG_SLOPE(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_LINEARREG_SLOPE
-
-```python
 def TA_LINEARREG_SLOPE(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_LINEARREG_SLOPE
-
-```python
-def TA_LINEARREG_SLOPE(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_LINEARREG_SLOPE
-
-```python
-def TA_LINEARREG_SLOPE(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_LINEARREG_SLOPE - Linear Regression Slope
-    
-    :param KData data: input KData
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_LINEARREG_SLOPE
@@ -8967,19 +6640,6 @@ def TA_MA(data: Indicator, n: int = 30, matype: int = 0) -> Indicator:
     """
 ```
 
-#### TA_MA
-
-```python
-def TA_MA(data: Indicator, n: int = 30, matype: int = 0) -> Indicator:
-    """
-    TA_MA - Moving average
-    
-    :param Indicator data: input data
-    :param int n: Number of periode (From 1 to 100000)
-    :param int matype: Type of Moving Average
-    """
-```
-
 #### TA_MACD
 
 ```python
@@ -9001,42 +6661,11 @@ def TA_MACD(data: Indicator, fast_n: int = 30, slow_n: int = 26, signal_n: int =
     """
 ```
 
-#### TA_MACD
-
-```python
-def TA_MACD(data: Indicator, fast_n: int = 30, slow_n: int = 26, signal_n: int = 9) -> Indicator:
-    """
-    TA_MACD - Moving Average Convergence/Divergence
-    
-    :param Indicator data: input data
-    :param int fast_n: Number of periode for fast MA (From 2 to 100000)
-    :param int slow_n: Number of periode for slow MA (From 2 to 100000)
-    :param int signal_n: Smoothing for the signal line (nb of period) (From 1 to 100000)
-    """
-```
-
 #### TA_MACDEXT
 
 ```python
 def TA_MACDEXT(fast_n: int = 12, slow_n: int = 26, signal_n: int = 9, fast_matype: int = 0, slow_matype: int = 0, signal_matype: int = 0) -> Indicator:
     ...
-```
-
-#### TA_MACDEXT
-
-```python
-def TA_MACDEXT(data: Indicator, fast_n: int = 30, slow_n: int = 26, signal_n: int = 9, fast_matype: int = 0, slow_matype: int = 0, signal_matype: int = 0) -> Indicator:
-    """
-    TA_MACDEXT - MACD with controllable MA type
-    
-    :param Indicator data: input data
-    :param int fast_n: Number of periode for fast MA (From 2 to 100000)
-    :param int slow_n: Number of periode for slow MA (From 2 to 100000)
-    :param int signal_n: Smoothing for the signal line (nb of period) (From 1 to 100000)
-    :param int fast_matype: Type of Moving Average for fast MA
-    :param int slow_matype: Type of Moving Average for slow MA
-    :param int signal_matype: Type of Moving Average for signal line
-    """
 ```
 
 #### TA_MACDEXT
@@ -9080,37 +6709,8 @@ def TA_MACDFIX(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MACDFIX
 
 ```python
-def TA_MACDFIX(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MACDFIX
-
-```python
 def TA_MACDFIX(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MACDFIX
-
-```python
-def TA_MACDFIX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MACDFIX
-
-```python
-def TA_MACDFIX(data: Indicator, n: int = 9) -> Indicator:
-    """
-    TA_MACDFIX - Moving Average Convergence/Divergence Fix 12/26
-    
-    :param Indicator data: input data
-    :param int n: Smoothing for the signal line (nb of period) (From 1 to 100000)
-    :return: result(0) - outMACD
-             result(1) - outMACDSignal
-             result(2) - outMACDHist
-    """
 ```
 
 #### TA_MACDFIX
@@ -9148,63 +6748,11 @@ def TA_MAMA(data: Indicator, fast_limit: float = 0.5, slow_limit: float = 0.05) 
     """
 ```
 
-#### TA_MAMA
-
-```python
-def TA_MAMA(data: Indicator, fast_limit: float = 0.5, slow_limit: float = 0.05) -> Indicator:
-    """
-    TA_MAMA - MESA Adaptive Moving Average
-    
-    :param Indicator data: input data
-    :param float fast_limit: Fast limit (From 0.01 to 0.99)
-    :param float slow_limit: Slow limit (From 0.01 to 0.99)
-    """
-```
-
 #### TA_MAVP
 
 ```python
 def TA_MAVP(ref_ind: Indicator, min_n: int = 2, max_n: int = 30, matype: int = 0, fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### TA_MAVP
-
-```python
-def TA_MAVP(ref_ind: Indicator, min_n: int = 2, max_n: int = 30, matype: int = 0, fill_null: bool = True) -> Indicator:
-    ...
-```
-
-#### TA_MAVP
-
-```python
-def TA_MAVP(ind1: Indicator, ind2: Indicator, min_n: int = 2, max_n: int = 30, fill_null: int = True, matype: bool = 0) -> Indicator:
-    """
-    TA_MAVP - Moving average with variable period
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    :param int min_n: Value less than minimum will be changed to Minimum period (From 2 to 100000)
-    :param int max_n: Value higher than maximum will be changed to Maximum period (From 2 to 100000)
-    :param int matype: Type of Moving Average
-    :param bool fill_null: 日期对齐时，缺失日期数据填充nan值
-    """
-```
-
-#### TA_MAVP
-
-```python
-def TA_MAVP(ind1: Indicator, ind2: Indicator, min_n: int = 2, max_n: int = 30, fill_null: int = True, matype: bool = 0) -> Indicator:
-    """
-    TA_MAVP - Moving average with variable period
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    :param int min_n: Value less than minimum will be changed to Minimum period (From 2 to 100000)
-    :param int max_n: Value higher than maximum will be changed to Maximum period (From 2 to 100000)
-    :param int matype: Type of Moving Average
-    :param bool fill_null: 日期对齐时，缺失日期数据填充nan值
-    """
 ```
 
 #### TA_MAVP
@@ -9247,34 +6795,8 @@ def TA_MAX(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MAX
 
 ```python
-def TA_MAX(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MAX
-
-```python
 def TA_MAX(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MAX
-
-```python
-def TA_MAX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MAX
-
-```python
-def TA_MAX(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_MAX - Highest value over a specified period
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_MAX
@@ -9313,34 +6835,8 @@ def TA_MAXINDEX(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MAXINDEX
 
 ```python
-def TA_MAXINDEX(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MAXINDEX
-
-```python
 def TA_MAXINDEX(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MAXINDEX
-
-```python
-def TA_MAXINDEX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MAXINDEX
-
-```python
-def TA_MAXINDEX(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_MAXINDEX - Index of highest value over a specified period
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_MAXINDEX
@@ -9414,34 +6910,8 @@ def TA_MIDPOINT(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MIDPOINT
 
 ```python
-def TA_MIDPOINT(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MIDPOINT
-
-```python
 def TA_MIDPOINT(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MIDPOINT
-
-```python
-def TA_MIDPOINT(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MIDPOINT
-
-```python
-def TA_MIDPOINT(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_MIDPOINT - MidPoint over period
-    
-    :param Indicator data: input
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_MIDPOINT
@@ -9499,34 +6969,8 @@ def TA_MIN(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MIN
 
 ```python
-def TA_MIN(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MIN
-
-```python
 def TA_MIN(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MIN
-
-```python
-def TA_MIN(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MIN
-
-```python
-def TA_MIN(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_MIN - Lowest value over a specified period
-    
-    :param Indicator data: input
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_MIN
@@ -9565,34 +7009,8 @@ def TA_MININDEX(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MININDEX
 
 ```python
-def TA_MININDEX(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MININDEX
-
-```python
 def TA_MININDEX(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MININDEX
-
-```python
-def TA_MININDEX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MININDEX
-
-```python
-def TA_MININDEX(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_MININDEX - Index of lowest value over a specified period
-    
-    :param Indicator data: input
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_MININDEX
@@ -9631,36 +7049,8 @@ def TA_MINMAX(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MINMAX
 
 ```python
-def TA_MINMAX(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MINMAX
-
-```python
 def TA_MINMAX(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MINMAX
-
-```python
-def TA_MINMAX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MINMAX
-
-```python
-def TA_MINMAX(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_MINMAX - Lowest and highest values over a specified period
-    
-    :param Indicator data: input
-    :param int n: Number of period (From 2 to 100000)
-    :return: result(0) - outMin
-             result(1) - outMax
-    """
 ```
 
 #### TA_MINMAX
@@ -9701,36 +7091,8 @@ def TA_MINMAXINDEX(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MINMAXINDEX
 
 ```python
-def TA_MINMAXINDEX(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MINMAXINDEX
-
-```python
 def TA_MINMAXINDEX(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MINMAXINDEX
-
-```python
-def TA_MINMAXINDEX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MINMAXINDEX
-
-```python
-def TA_MINMAXINDEX(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_MINMAXINDEX - Indexes of lowest and highest values over a specified period
-        
-    :param Indicator data: input
-    :param int n: Number of period (From 2 to 100000)
-    :return: result(0) - outMinIdx
-             result(1) - outMaxIdx
-    """
 ```
 
 #### TA_MINMAXINDEX
@@ -9809,34 +7171,8 @@ def TA_MOM(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_MOM
 
 ```python
-def TA_MOM(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_MOM
-
-```python
 def TA_MOM(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_MOM
-
-```python
-def TA_MOM(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_MOM
-
-```python
-def TA_MOM(data: Indicator, n: int = 10) -> Indicator:
-    """
-    TA_MOM - Momentum
-        
-    :param Indicator data: input data
-    :param int n: Number of period (From 1 to 100000)
-    """
 ```
 
 #### TA_MOM
@@ -9856,30 +7192,6 @@ def TA_MOM(data: Indicator, n: int = 10) -> Indicator:
 ```python
 def TA_MULT(fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### TA_MULT
-
-```python
-def TA_MULT(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    TA_MULT - Vector Arithmetic Mult
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    """
-```
-
-#### TA_MULT
-
-```python
-def TA_MULT(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    TA_MULT - Vector Arithmetic Mult
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    """
 ```
 
 #### TA_MULT
@@ -9988,20 +7300,6 @@ def TA_PPO(data: Indicator, fast_n: int = 12, slow_n: int = 26, matype: int = 0)
     """
 ```
 
-#### TA_PPO
-
-```python
-def TA_PPO(data: Indicator, fast_n: int = 12, slow_n: int = 26, matype: int = 0) -> Indicator:
-    """
-    TA_PPO - Percentage Price Oscillator
-    
-    :param Indicator data: input data
-    :param int fast_n: Number of periode for fast MA (From 2 to 100000)
-    :param int slow_n: Number of periode for slow MA (From 2 to 100000)
-    :param int matype: Type of Moving Average
-    """
-```
-
 #### TA_ROC
 
 ```python
@@ -10026,34 +7324,8 @@ def TA_ROC(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_ROC
 
 ```python
-def TA_ROC(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_ROC
-
-```python
 def TA_ROC(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_ROC
-
-```python
-def TA_ROC(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_ROC
-
-```python
-def TA_ROC(data: Indicator, n: int = 10) -> Indicator:
-    """
-    TA_ROC - Rate of change : ((price/prevPrice)-1)*100
-        
-    :param Indicator data: input data
-    :param int n: Number of period (From 1 to 100000)
-    """
 ```
 
 #### TA_ROC
@@ -10092,34 +7364,8 @@ def TA_ROCP(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_ROCP
 
 ```python
-def TA_ROCP(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_ROCP
-
-```python
 def TA_ROCP(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_ROCP
-
-```python
-def TA_ROCP(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_ROCP
-
-```python
-def TA_ROCP(data: Indicator, n: int = 10) -> Indicator:
-    """
-    TA_ROCP - Rate of change Percentage: (price-prevPrice)/prevPrice
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 1 to 100000)
-    """
 ```
 
 #### TA_ROCP
@@ -10158,34 +7404,8 @@ def TA_ROCR(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_ROCR
 
 ```python
-def TA_ROCR(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_ROCR
-
-```python
 def TA_ROCR(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_ROCR
-
-```python
-def TA_ROCR(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_ROCR
-
-```python
-def TA_ROCR(data: Indicator, n: int = 10) -> Indicator:
-    """
-    TA_ROCR - Rate of change ratio: (price/prevPrice)
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 1 to 100000)
-    """
 ```
 
 #### TA_ROCR
@@ -10224,34 +7444,8 @@ def TA_ROCR100(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_ROCR100
 
 ```python
-def TA_ROCR100(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_ROCR100
-
-```python
 def TA_ROCR100(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_ROCR100
-
-```python
-def TA_ROCR100(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_ROCR100
-
-```python
-def TA_ROCR100(data: Indicator, n: int = 10) -> Indicator:
-    """
-    TA_ROCR100 - Rate of change ratio 100 scale: (price/prevPrice)*100
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 1 to 100000)
-    """
 ```
 
 #### TA_ROCR100
@@ -10290,34 +7484,8 @@ def TA_RSI(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_RSI
 
 ```python
-def TA_RSI(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_RSI
-
-```python
 def TA_RSI(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_RSI
-
-```python
-def TA_RSI(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_RSI
-
-```python
-def TA_RSI(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_RSI - Relative Strength Index
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_RSI
@@ -10448,34 +7616,8 @@ def TA_SMA(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_SMA
 
 ```python
-def TA_SMA(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_SMA
-
-```python
 def TA_SMA(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_SMA
-
-```python
-def TA_SMA(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_SMA
-
-```python
-def TA_SMA(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_SMA - Simple Moving Average
-        
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_SMA
@@ -10518,19 +7660,6 @@ def TA_SQRT(arg0: float) -> Indicator:
 ```python
 def TA_STDDEV(n: int = 5, nbdev: float = 1.0) -> Indicator:
     ...
-```
-
-#### TA_STDDEV
-
-```python
-def TA_STDDEV(data: Indicator, n: int = 5, nbdev: float = 1.0) -> Indicator:
-    """
-    TA_STDDEV - Standard Deviation
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    :param float nbdev: Nb of deviations
-    """
 ```
 
 #### TA_STDDEV
@@ -10618,52 +7747,11 @@ def TA_STOCHRSI(data: Indicator, n: int = 14, fastk_n: int = 5, fastd_n: int = 3
     """
 ```
 
-#### TA_STOCHRSI
-
-```python
-def TA_STOCHRSI(data: Indicator, n: int = 14, fastk_n: int = 5, fastd_n: int = 3, matype: int = 0) -> Indicator:
-    """
-    TA_STOCHRSI - Stochastic Relative Strength Index
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    :param int fastk_n: Time period for building the Fast-K line (From 1 to 100000)
-    :param int fastd_n: Smoothing for making the Fast-D line. Usually set to 3 (From 1 to 100000)
-    :param int matype: Type of Moving Average for Fast D (From 0 to 8))
-    :return: result0 - fast K 
-             result1 - fast D
-    """
-```
-
 #### TA_SUB
 
 ```python
 def TA_SUB(fill_null: bool = True) -> Indicator:
     ...
-```
-
-#### TA_SUB
-
-```python
-def TA_SUB(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    TA_SUB - Vector Arithmetic Subtraction
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    """
-```
-
-#### TA_SUB
-
-```python
-def TA_SUB(ind1: Indicator, ind2: Indicator, fill_null: bool = True) -> Indicator:
-    """
-    TA_SUB - Vector Arithmetic Subtraction
-    
-    :param Indicator ind1: input1
-    :param Indicator ind2: input2
-    """
 ```
 
 #### TA_SUB
@@ -10702,34 +7790,8 @@ def TA_SUM(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_SUM
 
 ```python
-def TA_SUM(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_SUM
-
-```python
 def TA_SUM(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_SUM
-
-```python
-def TA_SUM(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_SUM
-
-```python
-def TA_SUM(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_SUM - Summation
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_SUM
@@ -10749,19 +7811,6 @@ def TA_SUM(data: Indicator, n: int = 30) -> Indicator:
 ```python
 def TA_T3(n: int = 5, vfactor: float = 0.7) -> Indicator:
     ...
-```
-
-#### TA_T3
-
-```python
-def TA_T3(data: Indicator, n: int = 5, vfactor: float = 0.7) -> Indicator:
-    """
-    TA_T3 - Triple Exponential Moving Average (T3)
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    :param float vfactor: Volume Factor (From 0 to 1)
-    """
 ```
 
 #### TA_T3
@@ -10847,34 +7896,8 @@ def TA_TEMA(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_TEMA
 
 ```python
-def TA_TEMA(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_TEMA
-
-```python
 def TA_TEMA(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_TEMA
-
-```python
-def TA_TEMA(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_TEMA
-
-```python
-def TA_TEMA(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_TEMA - Triple Exponential Moving Average
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_TEMA
@@ -10929,34 +7952,8 @@ def TA_TRIMA(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_TRIMA
 
 ```python
-def TA_TRIMA(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_TRIMA
-
-```python
 def TA_TRIMA(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_TRIMA
-
-```python
-def TA_TRIMA(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_TRIMA
-
-```python
-def TA_TRIMA(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_TRIMA - Triangular Moving Average
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_TRIMA
@@ -10995,34 +7992,8 @@ def TA_TRIX(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_TRIX
 
 ```python
-def TA_TRIX(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_TRIX
-
-```python
 def TA_TRIX(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_TRIX
-
-```python
-def TA_TRIX(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_TRIX
-
-```python
-def TA_TRIX(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_TRIX - 1-day Rate-Of-Change (ROC) of a Triple Smooth EMA
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 1 to 100000)
-    """
 ```
 
 #### TA_TRIX
@@ -11061,34 +8032,8 @@ def TA_TSF(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_TSF
 
 ```python
-def TA_TSF(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_TSF
-
-```python
 def TA_TSF(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_TSF
-
-```python
-def TA_TSF(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_TSF
-
-```python
-def TA_TSF(data: Indicator, n: int = 14) -> Indicator:
-    """
-    TA_TSF - Time Series Forecast
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_TSF
@@ -11145,19 +8090,6 @@ def TA_ULTOSC(data: KData, n1: int = 7, n2: int = 14, n3: int = 28) -> Indicator
 ```python
 def TA_VAR(n: int = 5, nbdev: float = 1.0) -> Indicator:
     ...
-```
-
-#### TA_VAR
-
-```python
-def TA_VAR(data: Indicator, n: int = 5, nbdev: float = 1.0) -> Indicator:
-    """
-    TA_VAR - Variance
-    
-    :param Indicator data: input data
-    :param int n: Number of period (From 1 to 100000)
-    :param float nbdev: Nb of deviations
-    """
 ```
 
 #### TA_VAR
@@ -11232,34 +8164,8 @@ def TA_WMA(arg0: Indicator, arg1: IndParam) -> Indicator:
 #### TA_WMA
 
 ```python
-def TA_WMA(arg0: Indicator, arg1: IndParam) -> Indicator:
-    ...
-```
-
-#### TA_WMA
-
-```python
 def TA_WMA(arg0: Indicator, arg1: Indicator) -> Indicator:
     ...
-```
-
-#### TA_WMA
-
-```python
-def TA_WMA(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### TA_WMA
-
-```python
-def TA_WMA(data: Indicator, n: int = 30) -> Indicator:
-    """
-    TA_WMA - Weighted Moving Average
-        
-    :param Indicator data: input data
-    :param int n: Number of period (From 2 to 100000)
-    """
 ```
 
 #### TA_WMA
@@ -11390,37 +8296,8 @@ def UPNDAY(data: Indicator, n: int = 3) -> Indicator:
 #### UPNDAY
 
 ```python
-def UPNDAY(data: Indicator, n: int = 3) -> Indicator:
-    ...
-```
-
-#### UPNDAY
-
-```python
 def UPNDAY(data: Indicator, n: IndParam) -> Indicator:
     ...
-```
-
-#### UPNDAY
-
-```python
-def UPNDAY(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### UPNDAY
-
-```python
-def UPNDAY(data: Indicator, n: Indicator) -> Indicator:
-    """
-    UPNDAY(data[, n=3])
-    
-        连涨周期数, UPNDAY(CLOSE,M)表示连涨M个周期
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### UPNDAY
@@ -11462,37 +8339,8 @@ def VAR(data: Indicator, n: IndParam) -> Indicator:
 #### VAR
 
 ```python
-def VAR(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### VAR
-
-```python
 def VAR(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### VAR
-
-```python
-def VAR(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### VAR
-
-```python
-def VAR(data: Indicator, n: int = 10) -> Indicator:
-    """
-    VAR([data, n=10])
-    
-        估算样本方差, VAR(X,N)为X的N日估算样本方差
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### VAR
@@ -11534,37 +8382,8 @@ def VARP(data: Indicator, n: IndParam) -> Indicator:
 #### VARP
 
 ```python
-def VARP(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### VARP
-
-```python
 def VARP(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### VARP
-
-```python
-def VARP(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### VARP
-
-```python
-def VARP(data: Indicator, n: int = 10) -> Indicator:
-    """
-    VARP([data, n=10])
-    
-        总体样本方差, VARP(X,N)为X的N日总体样本方差
-    
-        :param Indicator data: 输入数据
-        :param int n|Indicator|IndParam: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### VARP
@@ -11623,27 +8442,6 @@ def WEAVE(arg0: Indicator, arg1: Indicator) -> Indicator:
 #### WEAVE
 
 ```python
-def WEAVE(arg0: Indicator, arg1: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
 def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator) -> Indicator:
     ...
 ```
@@ -11658,152 +8456,8 @@ def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator) ->
 #### WEAVE
 
 ```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
 def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator) -> Indicator:
     ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator) -> Indicator:
-    ...
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator, arg5: Indicator) -> Indicator:
-    """
-    WEAVE(ind1, ind2[, ind3, ind4, ind5, ind6])
-    
-        将最多6个Indicator的结果组合在一起放在一个Indicator中。如ind = WEAVE(ind1, ind2), 则此时ind包含多个结果，按ind1、ind2的顺序存放。
-        
-        :param Indicator ind1: 指标1
-        :param Indicator ind2: 指标2
-        :param Indicator ind3: 指标3, 可省略
-        :param Indicator ind4: 指标4, 可省略
-        :param Indicator ind5: 指标5, 可省略
-        :param Indicator ind6: 指标6, 可省略
-        :rtype: Indicator
-    """
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator, arg5: Indicator) -> Indicator:
-    """
-    WEAVE(ind1, ind2[, ind3, ind4, ind5, ind6])
-    
-        将最多6个Indicator的结果组合在一起放在一个Indicator中。如ind = WEAVE(ind1, ind2), 则此时ind包含多个结果，按ind1、ind2的顺序存放。
-        
-        :param Indicator ind1: 指标1
-        :param Indicator ind2: 指标2
-        :param Indicator ind3: 指标3, 可省略
-        :param Indicator ind4: 指标4, 可省略
-        :param Indicator ind5: 指标5, 可省略
-        :param Indicator ind6: 指标6, 可省略
-        :rtype: Indicator
-    """
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator, arg5: Indicator) -> Indicator:
-    """
-    WEAVE(ind1, ind2[, ind3, ind4, ind5, ind6])
-    
-        将最多6个Indicator的结果组合在一起放在一个Indicator中。如ind = WEAVE(ind1, ind2), 则此时ind包含多个结果，按ind1、ind2的顺序存放。
-        
-        :param Indicator ind1: 指标1
-        :param Indicator ind2: 指标2
-        :param Indicator ind3: 指标3, 可省略
-        :param Indicator ind4: 指标4, 可省略
-        :param Indicator ind5: 指标5, 可省略
-        :param Indicator ind6: 指标6, 可省略
-        :rtype: Indicator
-    """
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator, arg5: Indicator) -> Indicator:
-    """
-    WEAVE(ind1, ind2[, ind3, ind4, ind5, ind6])
-    
-        将最多6个Indicator的结果组合在一起放在一个Indicator中。如ind = WEAVE(ind1, ind2), 则此时ind包含多个结果，按ind1、ind2的顺序存放。
-        
-        :param Indicator ind1: 指标1
-        :param Indicator ind2: 指标2
-        :param Indicator ind3: 指标3, 可省略
-        :param Indicator ind4: 指标4, 可省略
-        :param Indicator ind5: 指标5, 可省略
-        :param Indicator ind6: 指标6, 可省略
-        :rtype: Indicator
-    """
-```
-
-#### WEAVE
-
-```python
-def WEAVE(arg0: Indicator, arg1: Indicator, arg2: Indicator, arg3: Indicator, arg4: Indicator, arg5: Indicator) -> Indicator:
-    """
-    WEAVE(ind1, ind2[, ind3, ind4, ind5, ind6])
-    
-        将最多6个Indicator的结果组合在一起放在一个Indicator中。如ind = WEAVE(ind1, ind2), 则此时ind包含多个结果，按ind1、ind2的顺序存放。
-        
-        :param Indicator ind1: 指标1
-        :param Indicator ind2: 指标2
-        :param Indicator ind3: 指标3, 可省略
-        :param Indicator ind4: 指标4, 可省略
-        :param Indicator ind5: 指标5, 可省略
-        :param Indicator ind6: 指标6, 可省略
-        :rtype: Indicator
-    """
 ```
 
 #### WEAVE
@@ -11898,37 +8552,8 @@ def WMA(data: Indicator, n: IndParam) -> Indicator:
 #### WMA
 
 ```python
-def WMA(data: Indicator, n: IndParam) -> Indicator:
-    ...
-```
-
-#### WMA
-
-```python
 def WMA(data: Indicator, n: Indicator) -> Indicator:
     ...
-```
-
-#### WMA
-
-```python
-def WMA(data: Indicator, n: Indicator) -> Indicator:
-    ...
-```
-
-#### WMA
-
-```python
-def WMA(data: Indicator, n: int = 22) -> Indicator:
-    """
-    WMA([data, n=22])
-    
-        加权移动平均，算法:Yn=(1*X1+2*X2+...+n*Xn)/(1+2+...+n)
-    
-        :param Indicator data: 输入数据
-        :param int|Indicator|IndParam n: 时间窗口
-        :rtype: Indicator
-    """
 ```
 
 #### WMA
@@ -12002,20 +8627,6 @@ def ZHBOND10(data: Indicator, default_val: float = 0.4) -> Indicator:
     """
 ```
 
-#### ZHBOND10
-
-```python
-def ZHBOND10(data: Indicator, default_val: float = 0.4) -> Indicator:
-    """
-    ZHBOND10([data, defaut_val])
-    
-        获取10年期中国国债收益率
-    
-        :param DatetimeList|KDate|Indicator data: 输入的日期参考，优先使用上下文中的日期
-        :param float default_val: 如果输入的日期早于已有国债数据的最早记录，则使用此默认值
-    """
-```
-
 #### ZONGGUBEN
 
 ```python
@@ -12042,25 +8653,6 @@ def ZONGGUBEN(arg0: KData) -> Indicator:
 ```python
 def ZSCORE(out_extreme: bool = False, nsigma: float = 3.0, recursive: bool = False) -> Indicator:
     ...
-```
-
-#### ZSCORE
-
-```python
-def ZSCORE(data: Indicator, out_extreme: bool = False, nsigma: float = 3.0, recursive: bool = False) -> Indicator:
-    """
-    ZSCORE(data[, out_extreme, nsigma, recursive])
-    
-        对数据进行标准化（归一），可选进行极值排除
-    
-        注：非窗口滚动，如需窗口滚动的标准化，直接 (x - MA(x, n)) / STDEV(x, n) 即可。
-        
-        :param Indicator data: 待剔除异常值的数据
-        :param bool outExtreme: 指示剔除极值，默认 False
-        :param float nsigma: 剔除极值时使用的 nsigma 倍 sigma，默认 3.0
-        :param bool recursive: 是否进行递归剔除极值，默认 False
-        :rtype: Indicator
-    """
 ```
 
 #### ZSCORE

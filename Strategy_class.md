@@ -90,8 +90,6 @@ class Strategy:
 
 ## 相关方法
 
-### 与Strategy相关的方法
-
 #### crt_pf_strategy
 
 ```python

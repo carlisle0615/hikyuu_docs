@@ -197,8 +197,6 @@ class MoneyManagerBase:
 
 ## 相关方法
 
-### 与MoneyManagerBase相关的方法
-
 #### MM_FixedCapital
 
 ```python

@@ -133,8 +133,6 @@ class ProfitGoalBase:
 
 ## 相关方法
 
-### 与ProfitGoalBase相关的方法
-
 #### PG_FixedHoldDays
 
 ```python

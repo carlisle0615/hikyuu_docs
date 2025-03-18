@@ -117,8 +117,6 @@ class DatetimeList:
 
 ## 相关方法
 
-### 与DatetimeList相关的方法
-
 #### ALIGN
 
 ```python

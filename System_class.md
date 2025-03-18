@@ -278,8 +278,6 @@ class System:
 
 ## 相关方法
 
-### 与System相关的方法
-
 #### SYS_Simple
 
 ```python

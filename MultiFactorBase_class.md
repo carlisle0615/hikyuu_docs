@@ -179,8 +179,6 @@ class MultiFactorBase:
 
 ## 相关方法
 
-### 与MultiFactorBase相关的方法
-
 #### MF_EqualWeight
 
 ```python

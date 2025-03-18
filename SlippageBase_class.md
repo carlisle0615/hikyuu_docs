@@ -119,8 +119,6 @@ class SlippageBase:
 
 ## 相关方法
 
-### 与SlippageBase相关的方法
-
 #### SP_FixedPercent
 
 ```python

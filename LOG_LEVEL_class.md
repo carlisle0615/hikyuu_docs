@@ -60,8 +60,6 @@ class LOG_LEVEL:
 
 ## 相关方法
 
-### 与LOG_LEVEL相关的方法
-
 #### get_log_level
 
 ```python

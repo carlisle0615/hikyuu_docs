@@ -436,8 +436,6 @@ class TradeManager:
 
 ## 相关方法
 
-### 与TradeManager相关的方法
-
 #### crtBrokerTM
 
 ```python

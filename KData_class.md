@@ -217,8 +217,6 @@ class KData:
 
 ## 相关方法
 
-### 与KData相关的方法
-
 #### ALIGN
 
 ```python

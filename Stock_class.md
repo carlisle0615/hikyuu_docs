@@ -340,8 +340,6 @@ class Stock:
 
 ## 相关方法
 
-### 与Stock相关的方法
-
 #### IC
 
 ```python

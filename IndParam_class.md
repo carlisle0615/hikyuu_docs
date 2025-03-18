@@ -29,26 +29,10 @@ class IndParam:
 
 ## 相关方法
 
-### 与IndParam相关的方法
-
 #### AMA
 
 ```python
 def AMA(n: IndParam, fast_n: IndParam, slow_n: IndParam) -> Indicator:
-    ...
-```
-
-#### AMA
-
-```python
-def AMA(n: IndParam, fast_n: IndParam, slow_n: IndParam) -> Indicator:
-    ...
-```
-
-#### AMA
-
-```python
-def AMA(data: Indicator, n: IndParam, fast_n: IndParam, slow_n: IndParam) -> Indicator:
     ...
 ```
 
@@ -97,28 +81,7 @@ def MACD(n1: IndParam, n2: IndParam, n3: IndParam) -> Indicator:
 #### MACD
 
 ```python
-def MACD(n1: IndParam, n2: IndParam, n3: IndParam) -> Indicator:
-    ...
-```
-
-#### MACD
-
-```python
 def MACD(data: Indicator, n1: IndParam, n2: IndParam, n3: IndParam) -> Indicator:
-    ...
-```
-
-#### MACD
-
-```python
-def MACD(data: Indicator, n1: IndParam, n2: IndParam, n3: IndParam) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(n1: IndParam, n2: IndParam, p: float = 2.0) -> Indicator:
     ...
 ```
 
@@ -139,28 +102,7 @@ def SAFTYLOSS(n1: IndParam, n2: IndParam, p: IndParam) -> Indicator:
 #### SAFTYLOSS
 
 ```python
-def SAFTYLOSS(n1: IndParam, n2: IndParam, p: IndParam) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
 def SAFTYLOSS(data: Indicator, n1: IndParam, n2: IndParam, p: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: IndParam, n2: IndParam, p: float = 2.0) -> Indicator:
-    ...
-```
-
-#### SAFTYLOSS
-
-```python
-def SAFTYLOSS(data: Indicator, n1: IndParam, n2: IndParam, p: IndParam) -> Indicator:
     ...
 ```
 

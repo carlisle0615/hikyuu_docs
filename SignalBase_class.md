@@ -212,51 +212,11 @@ class SignalBase:
 
 ## 相关方法
 
-### 与SignalBase相关的方法
-
 #### SG_Add
 
 ```python
 def SG_Add(sg_list: typing.Sequence, alternate: bool) -> SignalBase:
     ...
-```
-
-#### SG_Add
-
-```python
-def SG_Add(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Add(sg1, sg2, alternate)
-    
-        生成两个指标之和的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-        :return: 信号指示器
-    """
-```
-
-#### SG_Add
-
-```python
-def SG_Add(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Add(sg1, sg2, alternate)
-    
-        生成两个指标之和的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-        :return: 信号指示器
-    """
 ```
 
 #### SG_Add
@@ -294,42 +254,6 @@ def SG_AllwaysBuy() -> SignalBase:
 ```python
 def SG_And(sg_list: typing.Sequence, alternate: bool) -> SignalBase:
     ...
-```
-
-#### SG_And
-
-```python
-def SG_And(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_And(sg1, sg2, alternate)
-    
-        生成两个指标与的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-    """
-```
-
-#### SG_And
-
-```python
-def SG_And(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_And(sg1, sg2, alternate)
-    
-        生成两个指标与的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-    """
 ```
 
 #### SG_And
@@ -473,42 +397,6 @@ def SG_Div(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
     """
 ```
 
-#### SG_Div
-
-```python
-def SG_Div(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Div(sg1, sg2, alternate)
-    
-        生成两个指标之差的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-    """
-```
-
-#### SG_Div
-
-```python
-def SG_Div(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Div(sg1, sg2, alternate)
-    
-        生成两个指标之差的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-    """
-```
-
 #### SG_Flex
 
 ```python
@@ -549,42 +437,6 @@ def SG_Mul(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
     """
 ```
 
-#### SG_Mul
-
-```python
-def SG_Mul(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Mul(sg1, sg2, alternate)
-    
-        生成两个指标之差的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-    """
-```
-
-#### SG_Mul
-
-```python
-def SG_Mul(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Mul(sg1, sg2, alternate)
-    
-        生成两个指标之差的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-    """
-```
-
 #### SG_OneSide
 
 ```python
@@ -605,42 +457,6 @@ def SG_OneSide(ind: Indicator, is_buy: bool) -> SignalBase:
 ```python
 def SG_Or(sg_list: typing.Sequence, alternate: bool) -> SignalBase:
     ...
-```
-
-#### SG_Or
-
-```python
-def SG_Or(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Or(sg1, sg2, alternate)
-    
-        生成两个指标与的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-    """
-```
-
-#### SG_Or
-
-```python
-def SG_Or(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Or(sg1, sg2, alternate)
-    
-        生成两个指标与的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-    """
 ```
 
 #### SG_Or
@@ -723,44 +539,6 @@ def SG_Single2(ind: Indicator, filter_n: int = 10, filter_p: float = 0.1) -> Sig
 ```python
 def SG_Sub(sg_list: typing.Sequence, alternate: bool) -> SignalBase:
     ...
-```
-
-#### SG_Sub
-
-```python
-def SG_Sub(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Sub(sg1, sg2, alternate)
-    
-        生成两个指标之差的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-        :return: 信号指示器
-    """
-```
-
-#### SG_Sub
-
-```python
-def SG_Sub(sg1: SignalBase, sg2: SignalBase, alternate: bool) -> SignalBase:
-    """
-    SG_Sub(sg1, sg2, alternate)
-    
-        生成两个指标之差的信号
-    
-        由于 SG 的 alternate 默认为 True, 在使用如  "sg1 + sg2 + sg3" 的形式时，容易忽略 sg1 + sg2 的 alternate 属性
-        建议使用: SG_Add(sg1, sg2, False) + sg3 来避免 alternate 的问题
-    
-        :param SignalBase sg1: 输入信号1
-        :param SignalBase sg2: 输入信号2
-        :param bool alternate: 是否交替买入卖出，默认为True
-        :return: 信号指示器
-    """
 ```
 
 #### SG_Sub

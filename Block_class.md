@@ -138,8 +138,6 @@ class Block:
 
 ## 相关方法
 
-### 与Block相关的方法
-
 #### BLOCKSETNUM
 
 ```python

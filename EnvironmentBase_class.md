@@ -134,8 +134,6 @@ class EnvironmentBase:
 
 ## 相关方法
 
-### 与EnvironmentBase相关的方法
-
 #### EV_Bool
 
 ```python

@@ -118,8 +118,6 @@ class StoplossBase:
 
 ## 相关方法
 
-### 与StoplossBase相关的方法
-
 #### ST_FixedPercent
 
 ```python

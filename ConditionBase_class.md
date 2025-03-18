@@ -171,8 +171,6 @@ class ConditionBase:
 
 ## 相关方法
 
-### 与ConditionBase相关的方法
-
 #### CN_Bool
 
 ```python

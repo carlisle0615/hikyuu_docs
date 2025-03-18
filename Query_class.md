@@ -9,8 +9,6 @@ class Query:
 
 ## 相关方法
 
-### 与Query相关的方法
-
 #### IC
 
 ```python
